@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FUNDAS — Decogri | Fábrica de Muebles en Don Torcuato</title>
+  <meta name="description" content="Decogri: Fabricación de Fundas Desmontables a medida. Calidad premium, empresa familiar en Don Torcuato. Envíos a todo el país.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Decogri",
+    "image": "https://decogri.com.ar/IMG/logo-decogri.jpg",
+    "url": "https://decogri.com.ar",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Don Torcuato",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/decogriok/",
+      "https://www.facebook.com/Decogriok/",
+      "https://www.tiktok.com/@decogriok",
+      "https://www.youtube.com/@luzgrisellemossilva7258",
+      "https://ar.pinterest.com/decogri/"
+    ],
+    "telephone": "+5491159565865"
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand: #111;
+      --white: #ffffff;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
+
+    /* MENU PRINCIPAL */
+    .menu-btn { position: fixed; top: 20px; left: 20px; z-index: 1001; background: #fff; color: #000; border: none; padding: 10px 20px; border-radius: 50px; font-weight: 800; cursor: pointer; box-shadow: var(--shadow); }
+    .overlay-menu { position: fixed; top: 0; left: 0; width: 100%; height: 0; background: rgba(0,0,0,0.98); z-index: 1000; overflow: hidden; transition: 0.5s; display: flex; justify-content: center; align-items: center; }
+    .overlay-menu.active { height: 100vh; }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; width: 80%; max-width: 1100px; }
+    .menu-category h3 { font-family: 'Playfair Display', serif; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; }
+    .menu-category ul { list-style: none; }
+    .menu-category a { color: #888; text-decoration: none; transition: 0.3s; display: block; margin-bottom: 8px; }
+    .menu-category a:hover { color: #fff; padding-left: 5px; }
+
+    /* SECCIONES SCROLL */
+    section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; scroll-snap-align: start; overflow: hidden; padding: 20px; }
+    
+    .bg-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; object-fit: cover; opacity: 0; transition: 1.5s; }
+    
+    .content { position: relative; z-index: 2; text-align: center; max-width: 800px; transform: translateY(50px); opacity: 0; transition: 1s ease-out; }
+    
+    section.active .content { transform: translateY(0); opacity: 1; }
+    section.active .bg-img { opacity: 0.5; transform: scale(1.05); }
+
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: 20px; }
+    p { font-size: clamp(1rem, 4vw, 1.4rem); font-weight: 300; line-height: 1.5; margin-bottom: 30px; }
+
+    .cta-button { display: inline-block; padding: 15px 40px; background: #fff; color: #000; border-radius: 50px; font-weight: 800; text-decoration: none; }
+
+    .footer-box { background: rgba(255,255,255,0.05); padding: 40px; border-radius: var(--radius); backdrop-filter: blur(10px); }
+  </style>
+</head>
+<body>
+
+  <button class="menu-btn" onclick="toggleMenu()">PRODUCTOS ▾</button>
+
+  <nav id="mega-menu" class="overlay-menu">
+    <div class="menu-grid">
+      <div class="menu-category">
+        <h3>Sillones</h3>
+        <ul>
+          <li><a href="../SILLONES/clasico.html">Sillón Clásico</a></li>
+          <li><a href="../SILLONES/martillo.html">Sillón Martillo</a></li>
+          <li><a href="../SILLONES/octa.html">Sillón Octa®</a></li>
+          <li><a href="../SILLONES/cubo.html">Sillón Cubo</a></li>
+          <li><a href="../SILLONES/circus.html">Circus</a></li>
+          <li><a href="../SILLONES/ghost.html">Ghost</a></li>
+        </ul>
+      </div>
+      <div class="menu-category">
+        <h3>Muebles</h3>
+        <ul>
+          <li><a href="../MUEBLES/sillas-banquetas.html">Sillas y Banquetas</a></li>
+          <li><a href="../MUEBLES/mesas.html">Mesas</a></li>
+          <li><a href="../MUEBLES/respaldosdecama.html">Respaldos de Cama</a></li>
+          <li><a href="../MUEBLES/puffs.html">Puffs</a></li>
+        </ul>
+      </div>
+      <div class="menu-category">
+        <h3>Textiles</h3>
+        <ul>
+           <li><a href="fundasdesmontables.html">Fundas Desmontables</a></li>
+          <li><a href="cortinas.html">Cortinas</a></li>
+          <li><a href="colchonetas.html">Colchonetas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="active">
+    <img src="../../IMG/TEXTILES/FUNDAS/SILLAS/fundas-silla3.jpg" class="bg-img" alt="Fundas para Sillas">
+    <div class="content">
+      <h2>Fundas a Medida</h2>
+      <p>Protección y estilo para tus sillas. Confeccionadas artesanalmente con géneros de primera calidad en nuestro taller de Don Torcuato.</p>
+      <a href="https://wa.me/5491159565865" class="cta-button">CONSULTAR WHATSAPP</a>
+    </div>
+  </section>
+
+  <section>
+    <img src="../../IMG/TEXTILES/FUNDAS/SILLONES/ITALIANO/italiano-funda4.jpg" class="bg-img" alt="Detalles de Fundas">
+    <div class="content">
+      <h2>Diseño de Autor</h2>
+      <p>Estructuras reforzadas y terminaciones premium para tu hogar. Fundas de Tusor y Lino pre-lavadas.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="content">
+      <div class="footer-box">
+        <h2>DECOGRI</h2>
+        <p>Don Torcuato, Buenos Aires</p>
+        <div style="margin-top:20px;">
+          <a href="../../index.html" style="color:white; text-decoration:none;">← VOLVER AL INICIO</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mega-menu');
+      menu.classList.toggle('active');
+      document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>

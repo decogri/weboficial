@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sillón Cubo — Decogri | Geometría y Confort Absoluto</title>
+
+  <meta name="description" content="Sillón Cubo Decogri: Estructura geométrica con respaldo y brazos a la misma altura. Máxima profundidad y confort. Fabricación artesanal en Don Torcuato.">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Sillón Cubo Decogri",
+    "image": "IMG/cubo1.jpg",
+    "description": "Sillón de diseño tipo caja con líneas rectas integradas y máxima profundidad para un confort superior.",
+    "brand": { "@type": "Brand", "name": "Decogri" },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://decogri.com.ar/sillon-cubo.html",
+      "availability": "https://schema.org/PreOrder",
+      "areaServed": "Argentina"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand: #111;
+      --white: #ffffff;
+      --glass: rgba(255, 255, 255, 0.1);
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
+
+    /* --- NAVEGACIÓN Y MEGA MENÚ (CORRECCIÓN) --- */
+    .menu-btn { 
+      position: fixed; top: 20px; left: 20px; z-index: 1100; 
+      background: #fff; color: #000; border: none; padding: 12px 25px; 
+      border-radius: 50px; font-weight: 800; cursor: pointer; 
+      box-shadow: var(--shadow); font-family: 'Montserrat', sans-serif;
+    }
+
+    .overlay-menu { 
+      position: fixed; top: 0; left: 0; width: 100%; height: 0; 
+      background: rgba(0,0,0,0.98); z-index: 1050; overflow: hidden; 
+      transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1); 
+      display: flex; justify-content: center; align-items: center; 
+    }
+    .overlay-menu.active { height: 100vh; }
+
+    .menu-grid { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 40px; width: 85%; max-width: 1100px; text-align: left; opacity: 0; 
+    }
+    .overlay-menu.active .menu-grid { opacity: 1; transition: 0.5s ease 0.3s; }
+
+    .menu-category h3 { 
+      font-family: 'Playfair Display', serif; border-bottom: 1px solid #333; 
+      padding-bottom: 10px; margin-bottom: 15px; color: #fff;
+    }
+    .menu-category ul { list-style: none; }
+    .menu-category ul li { margin-bottom: 10px; }
+    .menu-category a { color: #888; text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
+    .menu-category a:hover { color: #fff; padding-left: 5px; }
+
+    /* --- SECCIONES --- */
+    section {
+      height: 100vh; display: flex; flex-direction: column; justify-content: center;
+      align-items: center; position: relative; scroll-snap-align: start;
+      overflow: hidden; padding: 20px;
+    }
+    .bg-img {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 1; object-fit: cover; opacity: 0.6; transition: 1.5s ease-out;
+    }
+    .content {
+      position: relative; z-index: 2; text-align: center; max-width: 800px;
+      transform: translateY(30px); opacity: 0; transition: 1s ease;
+    }
+    section.active .content { transform: translateY(0); opacity: 1; }
+    section.active .bg-img { transform: scale(1.1); }
+
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 7vw, 4.5rem); margin-bottom: 20px; }
+    p { font-size: clamp(1rem, 3.5vw, 1.3rem); font-weight: 300; line-height: 1.5; }
+
+    .cta-button {
+      margin-top: 30px; display: inline-block; padding: 15px 40px;
+      background: #fff; color: #000; border-radius: 50px; font-weight: 800;
+      text-decoration: none; transition: 0.3s;
+    }
+
+    .scroll-indicator {
+      position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+      z-index: 100; display: flex; flex-direction: column; gap: 15px;
+    }
+    .dot { width: 8px; height: 8px; background: rgba(255,255,255,0.3); border-radius: 50%; transition: 0.3s; }
+    .dot.active { background: #fff; transform: scale(1.8); }
+
+    @media (max-width: 768px) {
+      .menu-grid { grid-template-columns: 1fr; gap: 20px; padding-top: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="menu-btn" onclick="toggleMenu()">PRODUCTOS ▾</button>
+
+  <nav id="mega-menu" class="overlay-menu">
+    <div class="menu-grid">
+      <div class="menu-category">
+        <h3>Sillones</h3>
+        <ul>
+          <li><a href="clasico.html">Sillón Clásico</a></li>
+          <li><a href="circus.html">Sillón Circus</a></li>
+          <li><a href="martillo.html">Sillón Martillo</a></li>
+          <li><a href="octa.html">Sillón Octa®</a></li>
+          <li><a href="ghost.html">Sillón Ghost</a></li>
+          <li><a href="cubo.html">Sillón Cubo</a></li>
+        </ul>
+      </div>
+      <div class="menu-category">
+        <h3>Muebles</h3>
+        <ul>
+          <li><a href="../MUEBLES/sillas-banquetas.html">Sillas y Banquetas</a></li>
+          <li><a href="../MUEBLES/mesas.html">Mesas</a></li>
+          <li><a href="../MUEBLES/respaldosdecama.html">Respaldos de Cama</a></li>
+          <li><a href="../MUEBLES/puffs.html">Puffs</a></li>
+        </ul>
+      </div>
+      <div class="menu-category">
+        <h3>Textiles</h3>
+        <ul>
+          <li><a href="../TEXTILES/fundasdesmontables.html">Fundas Desmontables</a></li>
+          <li><a href="../TEXTILES/cortinas.html">Cortinas</a></li>
+          <li><a href="../TEXTILES/colchonetas.html">Colchonetas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="scroll-indicator">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <section class="active">
+    <img src="../../IMG/SILLONES/CUBO/sillon-cubo.jpg" class="bg-img" alt="Sillón Cubo Decogri">
+    <div class="content">
+      <h2>Sillón Cubo</h2>
+      <p>Geometría pura y confort absoluto. Un diseño tipo caja con líneas rectas que define la modernidad en tu living.</p>
+    </div>
+  </section>
+
+  <section>
+    <img src="../../IMG/SILLONES/ESQUINEROS/clasico-esquinero2.jpg" class="bg-img" alt="Confort Sillón Cubo">
+    <div class="content">
+      <h2>Máxima Profundidad</h2>
+      <p>Diseñado para un descanso real. Estructura de madera maciza con placa soft de alta densidad.</p>
+    </div>
+  </section>
+
+  <section>
+    <img src="../../IMG/SILLONES/ESQUINEROS/esquinero1-clasico.jpg" class="bg-img" alt="Detalle Sillón Cubo">
+    <div class="content">
+      <h2>Líneas Integradas</h2>
+      <p>Respaldo y apoyabrazos a la misma altura para una estética equilibrada y minimalista.</p>
+      <a href="https://wa.me/5491159565865" class="cta-button">COTIZAR MI MEDIDA</a>
+    </div>
+  </section>
+
+  <section style="background: #000;">
+    <div class="content">
+      <h2 style="font-size: 2.5rem;">Decogri</h2>
+      <p style="font-size: 1rem; opacity: 0.7;">Empresa Familiar • Fabricación Directa • Don Torcuato</p>
+      <div style="margin-top: 40px; display: flex; gap: 20px; justify-content: center;">
+        <a href="../../index.html" style="color:#fff; text-decoration: none; font-weight: 700; border: 1px solid #444; padding: 10px 20px; border-radius: 50px;">INICIO</a>
+        <a href="https://www.instagram.com/decogriok/" style="color:#fff; text-decoration: none; font-weight: 700; border: 1px solid #444; padding: 10px 20px; border-radius: 50px;">INSTAGRAM</a>
+      </div>
+      <p style="margin-top: 60px; font-size: 0.7rem; opacity: 0.4;">© 2026 DECOGRI. ENVÍOS A TODO EL PAÍS.</p>
+    </div>
+  </section>
+
+  <script>
+    // FUNCIÓN PARA ABRIR/CERRAR EL MENÚ
+    function toggleMenu() {
+      const menu = document.getElementById('mega-menu');
+      menu.classList.toggle('active');
+      document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+    }
+
+    // OBSERVER PARA SECCIONES Y PUNTOS
+    const sections = document.querySelectorAll('section');
+    const dots = document.querySelectorAll('.dot');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sections.forEach(s => s.classList.remove('active'));
+          entry.target.classList.add('active');
+          const index = Array.from(sections).indexOf(entry.target);
+          dots.forEach(d => d.classList.remove('active'));
+          if(dots[index]) dots[index].classList.add('active');
+        }
+      });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
