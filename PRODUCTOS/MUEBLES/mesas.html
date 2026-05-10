@@ -33,6 +33,72 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <style>
+
+    /* Estilos del Botón Flotante */
+.menu-btn { 
+  position: fixed; 
+  top: 20px; 
+  left: 20px; 
+  z-index: 2001; 
+  background: #fff; 
+  color: #000; 
+  border: none; 
+  padding: 12px 24px; 
+  border-radius: 50px; 
+  font-weight: 800; 
+  cursor: pointer; 
+  box-shadow: 0 10px 30px rgba(0,0,0,.5); 
+  transition: 0.3s; 
+}
+
+/* Contenedor del Menú Fullscreen */
+.overlay-menu { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 0; 
+  background: rgba(0,0,0,0.98); 
+  z-index: 2000; 
+  overflow: hidden; 
+  transition: 0.5s ease-in-out; 
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start; 
+}
+
+.overlay-menu.active { height: 100vh; }
+
+/* Grilla de links con scroll para móvil */
+.menu-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 40px; 
+  width: 85%; 
+  max-width: 1100px; 
+  padding: 100px 0 50px; 
+  overflow-y: auto; 
+  max-height: 100vh; 
+}
+
+.menu-category h3 { 
+  font-family: 'Playfair Display', serif; 
+  border-bottom: 1px solid #333; 
+  padding-bottom: 10px; 
+  margin-bottom: 15px; 
+  color: #fff; 
+}
+
+.menu-category ul { list-style: none; padding: 0; }
+.menu-category ul li { margin-bottom: 12px; }
+.menu-category a { color: #aaa; text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
+.menu-category a:hover { color: #fff; }
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-btn { top: 15px; left: 15px; padding: 10px 20px; font-size: 0.8rem; }
+  .menu-grid { gap: 30px; padding-top: 80px; }
+} 
     :root {
       --brand: #111;
       --white: #ffffff;
@@ -75,6 +141,41 @@
   </style>
 </head>
 <body>
+
+  <button class="menu-btn" onclick="toggleMenu()" id="btn-txt">PRODUCTOS ▾</button>
+
+<nav id="mega-menu" class="overlay-menu">
+  <div class="menu-grid">
+    <div class="menu-category">
+      <h3>Sillones</h3>
+      <ul>
+        <li><a href="PRODUCTOS/SILLONES/clasico.html">Sillón Clásico</a></li>
+        <li><a href="PRODUCTOS/SILLONES/circus.html">Sillón Circus</a></li>
+        <li><a href="PRODUCTOS/SILLONES/martillo.html">Sillón Martillo</a></li>
+        <li><a href="PRODUCTOS/SILLONES/sillon-octa.html">Sillón Octa®</a></li>
+        <li><a href="PRODUCTOS/SILLONES/ghost.html">Sillón Ghost</a></li>
+        <li><a href="PRODUCTOS/SILLONES/cubo.html">Sillón Cubo</a></li>
+      </ul>
+    </div>
+    <div class="menu-category">
+      <h3>Muebles</h3>
+      <ul>
+        <li><a href="PRODUCTOS/MUEBLES/sillas-banquetas.html">Sillas y Banquetas</a></li>
+        <li><a href="PRODUCTOS/MUEBLES/mesas.html">Mesas</a></li>
+        <li><a href="PRODUCTOS/MUEBLES/respaldosdecama.html">Respaldos de Cama</a></li>
+        <li><a href="PRODUCTOS/MUEBLES/puffs.html">Puffs</a></li>
+      </ul>
+    </div>
+    <div class="menu-category">
+      <h3>Textiles</h3>
+      <ul>
+        <li><a href="PRODUCTOS/TEXTILES/fundasdesmontables.html">Fundas Desmontables</a></li>
+        <li><a href="PRODUCTOS/TEXTILES/cortinas.html">Cortinas</a></li>
+        <li><a href="PRODUCTOS/TEXTILES/colchonetas.html">Colchonetas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
 
   <button class="menu-btn" onclick="toggleMenu()">PRODUCTOS ▾</button>
 
