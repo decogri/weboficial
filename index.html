@@ -141,6 +141,17 @@
       .producto-card h3 { font-size: 1rem; padding: 12px 10px 2px; }
       .producto-card p { font-size: 0.75rem; padding: 0 10px 15px; }
       section { padding: 40px 15px; }
+      @media (max-width: 768px) { 
+  /* ... tus estilos actuales de mobile ... */
+
+  .video-texto-info {
+    display: none !important; /*oculta el bloque de texto en celulares */
+  }
+
+  #video-experience .grid { 
+    grid-template-columns: 1fr;
+  }
+
     }
   </style>
 </head>
@@ -230,7 +241,7 @@
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);"></div>
     </div>
 
-    <div style="background: var(--brand); color: #fff; padding: 60px; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+    <div class="video-texto-info" style="background: var(--brand); color: #fff; padding: 60px; display: flex; flex-direction: column; justify-content: center; text-align: left;">
       <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #fff; margin-bottom: 20px; line-height: 1.2;">
         Procesos que definen el confort.
       </h2>
