@@ -10,48 +10,74 @@
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/clasico.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/octa.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/ghost.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/cubo.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/martillo.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/circus.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/sillon-octa.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/respaldosdecama.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/sillas-banquetas.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/mesas.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/puffs.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/TEXTILES/fundasdesmontables.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/TEXTILES/cortinas.html</loc>
     <lastmod>2026-05-11</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://decogri.com.ar/PRODUCTOS/TEXTILES/colchonetas.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
