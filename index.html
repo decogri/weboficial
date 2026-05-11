@@ -39,6 +39,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    /* Animación de la barra Marquee */
+.marquee-bar {
+  background: var(--brand); /* Fondo negro/oscuro */
+  color: #fff;
+  padding: 12px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 30s linear infinite;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Pausar al pasar el mouse */
+.marquee-bar:hover .marquee-text {
+  animation-play-state: paused;
+} 
+    
     :root {
       --brand: #111;
       --brand2: #f3f4f6;
@@ -197,6 +230,15 @@
     </div>
   </div>
 </section> 
+
+  <div class="marquee-bar">
+  <div class="marquee-text">
+    SILLONES CON FUNDA A MEDIDA · DON TORCUATO · RESPALDOS DE CAMA · MODELO INDUSTRIAL REGISTRADO ® · MESAS · PUFFS · SILLONES GHOST CON FUNDA · TUSOR PESADO · ENVÍOS A TODO EL PAÍS · CALIDAD PIERO ® · DECOGRI · FUNDAS DESMONTABLES · CORTINAS A MEDIDA · TIGRE · ZONA NORTE · SILLONES EN DON TORCUATO · SILLÓN OCTA ® · FÁBRICA DIRECTA
+  </div>
+  <div class="marquee-text">
+    &nbsp; · SILLONES CON FUNDA A MEDIDA · DON TORCUATO · RESPALDOS DE CAMA · MODELO INDUSTRIAL REGISTRADO ® · MESAS · PUFFS · SILLONES GHOST CON FUNDA · TUSOR PESADO · ENVÍOS A TODO EL PAÍS · CALIDAD PIERO ® · DECOGRI · FUNDAS DESMONTABLES · CORTINAS A MEDIDA · TIGRE · ZONA NORTE · SILLONES EN DON TORCUATO · SILLÓN OCTA ® · FÁBRICA DIRECTA
+  </div>
+</div>
   
   <section id="modelos">
     <h2>Modelos de Autor</h2>
