@@ -204,7 +204,7 @@
                 <div class="container">
                     <div class="header-area">
                         <div class="logo-wrapper">
-                            <img src="IMG/LOGO/logo-decogri.jpg" alt="Decogri Sillones - Logo Dorado"/>
+                            <img src="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg" alt="Decogri Sillones - Logo Dorado"/>
                         </div>
                         <div class="brand-info">
                             <h1>Decogri <span>// Índice XML</span></h1>
