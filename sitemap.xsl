@@ -11,6 +11,7 @@
                 <title>Decogri | Consola XML Engine</title>
                 <meta charset="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+              <link rel="icon" type="image/png" href="IMG/LOGO/logo-decogri.jpg"/>
                 <style>
                     :root {
                         --bg-main: #f6f8fa;
