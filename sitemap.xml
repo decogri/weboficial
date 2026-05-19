@@ -95,32 +95,6 @@
   </url>
 
   <url>
-    <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/caramelo.html</loc>
-    <lastmod>2026-05-18T21:30:00-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://decogri.com.ar/IMG/SILLONES/CARAMELO/caramelo.jpg</image:loc>
-      <image:title>Sillón Línea Caramelo - Decogri</image:title>
-      <image:caption>Sillón de formato redondeado exclusivo de fábrica con terminación elegante.</image:caption>
-      <image:geographic_location>Don Torcuato, Buenos Aires, Argentina</image:geographic_location>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://decogri.com.ar/PRODUCTOS/SILLONES/esquineros.html</loc>
-    <lastmod>2026-05-18T21:30:00-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://decogri.com.ar/IMG/SILLONES/ESQUINEROS/clasico-esquineroedredon2.jpg</image:loc>
-      <image:title>Sillones Esquineros y Rinconeros a Medida - Decogri</image:title>
-      <image:caption>Sillones rinconeros a medida con chaiselongue y opciones modulares configurables.</image:caption>
-      <image:geographic_location>Don Torcuato, Buenos Aires, Argentina</image:geographic_location>
-    </image:image>
-  </url>
-
-  <url>
     <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/mesas.html</loc>
     <lastmod>2026-05-18T21:30:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -133,31 +107,6 @@
     </image:image>
   </url>
 
-  <url>
-    <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/mesas-exterior.html</loc>
-    <lastmod>2026-05-18T21:30:00-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://decogri.com.ar/IMG/MUEBLES/MESAS/EXTERIOR/exterior1.jpg</image:loc>
-      <image:title>Mesas de Exterior para Galerías y Jardines - Decogri</image:title>
-      <image:caption>Mobiliario para exterior preparado para la intemperie, galerías y quinchos.</image:caption>
-      <image:geographic_location>Don Torcuato, Buenos Aires, Argentina</image:geographic_location>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/mesas-ratonas.html</loc>
-    <lastmod>2026-05-18T21:30:00-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://decogri.com.ar/IMG/MUEBLES/MESAS/RATONAS/mesaratona-circular.jpg</image:loc>
-      <image:title>Mesas Ratonas de Living y Yute - Decogri</image:title>
-      <image:caption>Mesas ratonas de centro, formatos circulares y detalles rústicos en yute trenzado.</image:caption>
-      <image:geographic_location>Don Torcuato, Buenos Aires, Argentina</image:geographic_location>
-    </image:image>
-  </url>
 
   <url>
     <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/respaldosdecama.html</loc>
@@ -168,19 +117,6 @@
       <image:loc>https://decogri.com.ar/IMG/MUEBLES/RESPALDOS-DE-CAMA/funda-rustica1.jpg</image:loc>
       <image:title>Respaldos de Cama Tapizados, Canelón y Tachas - Decogri</image:title>
       <image:caption>Respaldos sommier a medida capitoné, lisos o con fundas rústicas de tusor.</image:caption>
-      <image:geographic_location>Don Torcuato, Buenos Aires, Argentina</image:geographic_location>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://decogri.com.ar/PRODUCTOS/MUEBLES/sillas.html</loc>
-    <lastmod>2026-05-18T21:30:00-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://decogri.com.ar/IMG/MUEBLES/SILLAS/sillas-petiribi.jpg</image:loc>
-      <image:title>Sillas de Comedor de Petiribí y Tapizadas - Decogri</image:title>
-      <image:caption>Sillas estructurales en madera maciza de Petiribí con asientos tapizados premium.</image:caption>
       <image:geographic_location>Don Torcuato, Buenos Aires, Argentina</image:geographic_location>
     </image:image>
   </url>
