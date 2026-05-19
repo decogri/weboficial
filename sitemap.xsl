@@ -254,19 +254,19 @@
                                     <xsl:variable name="fullUrl" select="sitemap:loc"/>
                                     
                                     <xsl:if test="position() = 1">
-                                        <tr class="section-row"><td colspan="4">📍 HOME &amp; CORE PAGES</td></tr>
+                                        <tr class="section-row"><td colspan="4"> HOME &amp; CORE PAGES</td></tr>
                                     </xsl:if>
                                     <xsl:if test="contains($fullUrl, '/PRODUCTOS/SILLONES/') and not(contains(preceding-sibling::sitemap:url[1]/sitemap:loc, '/PRODUCTOS/SILLONES/'))">
-                                        <tr class="section-row"><td colspan="4">🛋️ LÍNEA SILLONES A MEDIDA</td></tr>
+                                        <tr class="section-row"><td colspan="4"> LÍNEA SILLONES A MEDIDA</td></tr>
                                     </xsl:if>
                                     <xsl:if test="contains($fullUrl, '/PRODUCTOS/MUEBLES/') and not(contains(preceding-sibling::sitemap:url[1]/sitemap:loc, '/PRODUCTOS/MUEBLES/'))">
-                                        <tr class="section-row"><td colspan="4">🪵 MOBILIARIO DE DISEÑO &amp; INTERIOR</td></tr>
+                                        <tr class="section-row"><td colspan="4"> MOBILIARIO DE DISEÑO &amp; INTERIOR</td></tr>
                                     </xsl:if>
                                     <xsl:if test="contains($fullUrl, '/PRODUCTOS/TEXTILES/') and not(contains(preceding-sibling::sitemap:url[1]/sitemap:loc, '/PRODUCTOS/TEXTILES/'))">
-                                        <tr class="section-row"><td colspan="4">🧵 TEXTILES &amp; FUNDAS RÚSTICAS</td></tr>
+                                        <tr class="section-row"><td colspan="4"> TEXTILES &amp; FUNDAS RÚSTICAS</td></tr>
                                     </xsl:if>
                                     <xsl:if test="(not(contains($fullUrl, '/PRODUCTOS/')) and position() &gt; 1) and contains(preceding-sibling::sitemap:url[1]/sitemap:loc, '/PRODUCTOS/')">
-                                        <tr class="section-row"><td colspan="4">📋 SECCIONES INSTITUCIONALES</td></tr>
+                                        <tr class="section-row"><td colspan="4"> SECCIONES INSTITUCIONALES</td></tr>
                                     </xsl:if>
 
                                     <tr class="data-row" onclick="window.open('{$fullUrl}', '_blank')">
