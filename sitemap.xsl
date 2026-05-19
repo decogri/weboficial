@@ -265,9 +265,7 @@
                                     <xsl:if test="contains($fullUrl, '/PRODUCTOS/TEXTILES/') and not(contains(preceding-sibling::sitemap:url[1]/sitemap:loc, '/PRODUCTOS/TEXTILES/'))">
                                         <tr class="section-row"><td colspan="4"> TEXTILES &amp; FUNDAS RÚSTICAS</td></tr>
                                     </xsl:if>
-                                    <xsl:if test="(not(contains($fullUrl, '/PRODUCTOS/')) and position() &gt; 1) and contains(preceding-sibling::sitemap:url[1]/sitemap:loc, '/PRODUCTOS/')">
-                                        <tr class="section-row"><td colspan="4"> SECCIONES INSTITUCIONALES</td></tr>
-                                    </xsl:if>
+    
 
                                     <tr class="data-row" onclick="window.open('{$fullUrl}', '_blank')">
                                         <td>
