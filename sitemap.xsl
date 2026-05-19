@@ -12,44 +12,53 @@
                 <meta charset="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <style>
+                    :root {
+                        --bg-main: #fafafa;
+                        --card-bg: #ffffff;
+                        --text-main: #1a202c;
+                        --text-muted: #718096;
+                        --accent-gold: #bf953f;
+                        --accent-gold-dark: #aa8434;
+                        --border-color: #e2e8f0;
+                        --row-hover: #fbf8f3;
+                    }
                     body {
                         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
                         color: #333333;
-                        background-color: #f8f9fa;
+                        background-color: var(--bg-main);
                         margin: 0;
-                        padding: 50px 15px;
+                        padding: 60px 15px;
                     }
                     .container {
-                        max-width: 1000px;
+                        max-width: 1050px;
                         width: 100%;
                         margin: 0 auto;
-                        background: #ffffff;
-                        padding: 40px 30px;
-                        border-radius: 12px;
-                        border: 1px solid #e2e8f0;
-                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+                        background: var(--card-bg);
+                        padding: 45px 35px;
+                        border-radius: 16px;
+                        border: 1px solid var(--border-color);
+                        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.03);
                         box-sizing: border-box;
                         overflow: hidden;
                     }
                     
-                    /* CABECERA ACTUALIZADA CON LOGO DORADO */
+                    /* CABECERA CON LOGO Y ACENTOS PREMIUM */
                     .header-area {
                         display: flex;
                         align-items: center;
-                        gap: 25px;
+                        gap: 30px;
                         border-bottom: 2px solid #f1f5f9;
-                        padding-bottom: 25px;
+                        padding-bottom: 30px;
                         margin-bottom: 35px;
                     }
                     .logo-wrapper {
                         flex-shrink: 0;
                     }
                     .logo-wrapper img {
-                        width: 100px; /* Tamaño prolijo para el logo horizontal */
+                        width: 100px;
                         height: auto;
                         object-fit: contain;
-                        /* Sutil sombra dorada para integrarlo más */
-                        filter: drop-shadow(0 2px 4px rgba(191, 149, 63, 0.2)); 
+                        filter: drop-shadow(0 2px 8px rgba(191, 149, 63, 0.15)); 
                     }
                     .brand-info {
                         flex-grow: 1;
@@ -57,50 +66,54 @@
                     
                     h1 {
                         font-size: 24px;
-                        color: #1a202c;
-                        margin: 0 0 5px 0;
+                        color: var(--text-main);
+                        margin: 0 0 6px 0;
                         font-weight: 700;
-                        letter-spacing: -0.3px;
+                        letter-spacing: -0.5px;
                         text-transform: uppercase;
                     }
                     h1 span {
-                        /* Acento dorado sutil en el texto para combinar con el logo */
-                        color: #bf953f; 
+                        color: var(--accent-gold); 
                         font-weight: 600;
                     }
                     p.desc {
-                        color: #718096;
+                        color: var(--text-muted);
                         font-size: 13.5px;
                         margin: 0;
                         line-height: 1.6;
                     }
                     
+                    /* CONTADOR ESTILO BADGE DE SISTEMA */
                     .counter {
                         display: inline-flex;
                         align-items: center;
                         gap: 8px;
-                        background: #f1f5f9;
-                        color: #4a5568;
-                        padding: 6px 16px;
-                        border-radius: 20px;
+                        background: #111111;
+                        color: #ffffff;
+                        padding: 8px 18px;
+                        border-radius: 30px;
                         font-size: 11px;
                         font-weight: 600;
                         margin-bottom: 25px;
-                        letter-spacing: 0.5px;
+                        letter-spacing: 0.8px;
+                        border: 1px solid var(--accent-gold);
                     }
                     .counter span {
-                        width: 6px;
-                        height: 6px;
+                        width: 7px;
+                        height: 7px;
                         background-color: #38a169;
                         border-radius: 50%;
+                        display: inline-block;
+                        box-shadow: 0 0 8px #38a169;
                     }
                     
                     .table-responsive-wrapper {
                         width: 100%;
                         overflow-x: auto;
                         -webkit-overflow-scrolling: touch;
-                        border-radius: 8px;
-                        border: 1px solid #e2e8f0;
+                        border-radius: 10px;
+                        border: 1px solid var(--border-color);
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.01);
                     }
                     
                     table {
@@ -111,43 +124,44 @@
                     th {
                         background-color: #f8fafc;
                         color: #64748b;
-                        padding: 14px 18px;
+                        padding: 16px 20px;
                         font-size: 11px;
                         font-weight: 700;
                         text-transform: uppercase;
-                        letter-spacing: 0.8px;
-                        border-bottom: 2px solid #e2e8f0;
+                        letter-spacing: 1px;
+                        border-bottom: 2px solid var(--border-color);
                     }
                     td {
-                        padding: 16px 18px;
-                        font-size: 13.5px;
+                        padding: 18px 20px;
+                        font-size: 14px;
                         background-color: #ffffff;
                         border-bottom: 1px solid #f1f5f9;
-                        white-space: normal;
-                        word-wrap: break-word;
-                        word-break: break-all;
-                        overflow-wrap: break-word;
+                        vertical-align: middle;
                     }
                     tr:last-child td {
                         border-bottom: none;
                     }
-                    tr:hover td {
-                        background-color: #f8fafc;
+                    
+                    /* ANIMACIÓN E INTERACCIÓN PREMIUM POR FILA */
+                    tbody tr {
+                        cursor: pointer;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    tbody tr:hover td {
+                        background-color: var(--row-hover);
                     }
                     
                     td a {
                         color: #2d3748;
                         text-decoration: none;
                         font-weight: 500;
-                        display: block;
-                        white-space: normal;
-                        word-wrap: break-word;
-                        word-break: break-all;
+                        display: inline-block;
                         transition: color 0.15s ease;
                     }
-                    tr:hover td a {
-                        color: #000000;
-                        text-decoration: underline;
+                    /* Al hacer hover en la fila, se activa el estilo del enlace automáticamente */
+                    tbody tr:hover td a {
+                        color: var(--accent-gold-dark);
+                        text-decoration: none;
                     }
                     
                     .meta-cell {
@@ -155,28 +169,32 @@
                         font-size: 12px;
                         font-weight: 500;
                     }
-                    tr:hover .meta-cell {
+                    tbody tr:hover .meta-cell {
                         color: #4a5568;
                     }
                     
+                    /* BADGE PREMIUM MODERNO PARA MULTIMEDIA */
                     .img-indicator {
-                        /* Acento dorado sutil para el indicador de imagen */
-                        color: #bf953f; 
-                        font-size: 11px;
-                        background: rgba(191, 149, 63, 0.08);
-                        padding: 3px 8px;
-                        border-radius: 4px;
-                        font-weight: 600;
                         display: inline-flex;
                         align-items: center;
-                        gap: 4px;
+                        gap: 6px;
+                        background: #111111;
+                        color: #ffffff;
+                        font-size: 10.5px;
+                        padding: 5px 10px;
+                        border-radius: 6px;
+                        font-weight: 600;
+                        letter-spacing: 0.3px;
                         margin-top: 6px;
-                        border: 1px solid rgba(191, 149, 63, 0.15);
+                        border: 1px solid var(--accent-gold);
+                        text-transform: uppercase;
                     }
                     
                     .footer-brand {
                         text-align: center;
-                        margin-top: 40px;
+                        margin-top: 45px;
+                        padding-top: 20px;
+                        border-top: 1px solid #f1f5f9;
                         font-size: 12px;
                         color: #a0aec0;
                         letter-spacing: 0.5px;
@@ -184,18 +202,15 @@
                     
                     @media (max-width: 768px) {
                         body { padding: 20px 10px; }
-                        .container { padding: 25px 15px; }
-                        
-                        /* Ajuste de cabecera para celu */
+                        .container { padding: 30px 15px; }
                         .header-area {
                             flex-direction: column;
                             text-align: center;
                             gap: 15px;
                         }
                         .logo-wrapper img {
-                            width: 120px; /* Un toque más grande en celu si está centrado */
+                            width: 110px;
                         }
-                        
                         th:not(:first-child), td:not(:first-child) { display: none; }
                     }
                 </style>
@@ -230,16 +245,18 @@
                             </thead>
                             <tbody>
                                 <xsl:for-each select="sitemap:urlset/sitemap:url">
-                                    <tr>
+                                    <xsl:variable name="currentLoc" select="sitemap:loc"/>
+                                    <tr onclick="window.open('{$currentLoc}', '_blank')">
                                         <td>
-                                            <a href="{sitemap:loc}">
+                                            <a href="{$currentLoc}" onclick="event.stopPropagation();">
                                                 <xsl:value-of select="sitemap:loc"/>
                                             </a>
                                             <xsl:if test="image:image">
-                                                <span class="img-indicator">📸 Imagen SEO</span>
+                                                <br/>
+                                                <span class="img-indicator">📸 Imagen SEO Activa</span>
                                             </xsl:if>
                                         </td>
-                                        <td class="meta-cell" style="text-align: center;">
+                                        <td class="meta-cell" style="text-align: center; font-weight: 600;">
                                             <xsl:choose>
                                                 <xsl:when test="sitemap:priority"><xsl:value-of select="sitemap:priority"/></xsl:when>
                                                 <xsl:otherwise>-</xsl:otherwise>
@@ -264,10 +281,10 @@
                     </div>
                     
                     <div class="footer-brand">
-                        © Decogri | Fábrica de Sillones y Muebles de Diseño
+                        © Decogri | Arquitectura Digital y Desarrollo de Alta Gama
                     </div>
                 </div>
             </body>
         </html>
     </xsl:template>
-</xsl:stylesheet>
+</xsl:stylesheet> 
