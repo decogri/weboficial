@@ -3,35 +3,78 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/jpeg" href="/IMG/LOGO/logo-decogri.jpg" sizes="32x32" />
-  <title>SILLAS Y BANQUETAS — Decogri | Fábrica de Muebles en Don Torcuato</title>
-  <meta name="description" content="Decogri: Fabricación de Sillas y Banquetas a medida en Petiribí. Modelos tapizados en lienzo con fundas desmontables en tusor. Calidad premium en Don Torcuato.">
 
+  <link rel="icon" type="image/jpeg" href="/IMG/LOGO/logo-decogri.jpg" sizes="32x32" />
+
+  <title>Sillas y Banquetas a Medida | Decogri — Don Torcuato</title>
+
+  <meta name="description" content="Sillas y banquetas a medida fabricadas por Decogri en Don Torcuato. Petiribí, tapizados y fundas desmontables. Diseño, calidad y fabricación propia.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://decogri.com.ar/MUEBLES/sillas-banquetas.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sillas y Banquetas a Medida | Decogri">
+  <meta property="og:description" content="Sillas y banquetas de diseño fabricadas a medida en Petiribí, con tapizados y fundas desmontables. Fabricación propia en Don Torcuato.">
+  <meta property="og:url" content="https://decogri.com.ar/MUEBLES/sillas-banquetas.html">
+  <meta property="og:image" content="https://decogri.com.ar/IMG/MUEBLES/SILLAS/silla.jpg">
+  <meta property="og:site_name" content="Decogri">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sillas y Banquetas a Medida | Decogri">
+  <meta name="twitter:description" content="Sillas y banquetas de diseño fabricadas en Petiribí. Modelos a medida, tapizados y fundas desmontables.">
+  <meta name="twitter:image" content="https://decogri.com.ar/IMG/MUEBLES/SILLAS/silla.jpg">
+
+  <!-- Datos estructurados -->
   <script type="application/ld+json">
-{
-   "image": "https://decogri.com.ar/IMG/logo-decogri.jpg", 
-  "@context": "https://schema.org/",
-  "@type": "WebPage",
-  "name": "Sillas y Banquetas Decogri",
-  "description": "Sillas y banquetas de autor con diseño exclusivo, ideales para barras, comedores y espacios de diseño.",
-  "mainEntity": {
-    "@type": "ItemList",
-    "name": "Catálogo de Sillas y Banquetas",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Sillas de diseño"
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Sillas y Banquetas a Medida Decogri",
+    "description": "Catálogo de sillas y banquetas fabricadas por Decogri en Don Torcuato, Buenos Aires.",
+    "url": "https://decogri.com.ar/MUEBLES/sillas-banquetas.html",
+    "image": "https://decogri.com.ar/IMG/MUEBLES/SILLAS/silla.jpg",
+    "inLanguage": "es-AR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Decogri",
+      "url": "https://decogri.com.ar"
+    },
+    "about": {
+      "@type": "Product",
+      "name": "Sillas y Banquetas Decogri",
+      "brand": {
+        "@type": "Brand",
+        "name": "Decogri"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Banquetas altas para barra"
-      }
-    ]
+      "category": "Sillas y banquetas"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Catálogo de Sillas y Banquetas",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Sillas de Petiribí"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sillas con funda desmontable"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Banquetas altas de Petiribí"
+        }
+      ]
+    }
   }
-}
-</script>
+  </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
@@ -49,40 +92,185 @@
     body { font-family: 'Montserrat', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
 
     /* MEGA MENU */
-    .menu-btn { position: fixed; top: 20px; left: 20px; z-index: 1001; background: #fff; color: #000; border: none; padding: 10px 20px; border-radius: 50px; font-weight: 800; cursor: pointer; box-shadow: var(--shadow); }
-    .overlay-menu { position: fixed; top: 0; left: 0; width: 100%; height: 0; background: rgba(0,0,0,0.98); z-index: 1000; overflow: hidden; transition: 0.5s; display: flex; justify-content: center; align-items: center; text-align: left; }
-    .overlay-menu.active { height: 100vh; }
-    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; width: 80%; max-width: 1100px; }
-    .menu-category h3 { font-family: 'Playfair Display', serif; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; }
-    .menu-category ul { list-style: none; }
-    .menu-category ul li { margin-bottom: 8px; }
-    .menu-category a { color: #888; text-decoration: none; transition: 0.3s; }
-    .menu-category a:hover { color: #fff; }
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    .overlay-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(0,0,0,0.98);
+      z-index: 1000;
+      overflow: hidden;
+      transition: 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+
+    .overlay-menu.active {
+      height: 100vh;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      width: 80%;
+      max-width: 1100px;
+    }
+
+    .menu-category h3 {
+      font-family: 'Playfair Display', serif;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .menu-category ul {
+      list-style: none;
+    }
+
+    .menu-category ul li {
+      margin-bottom: 8px;
+    }
+
+    .menu-category a {
+      color: #888;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .menu-category a:hover {
+      color: #fff;
+    }
 
     /* SECCIONES SCROLL */
-    section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; scroll-snap-align: start; overflow: hidden; padding: 20px; }
-    .bg-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; object-fit: cover; opacity: 0.5; transition: 1.5s; }
-    .content { position: relative; z-index: 2; text-align: center; max-width: 800px; transform: translateY(30px); opacity: 0; transition: 1s; }
-    section.active .content { transform: translateY(0); opacity: 1; }
-    section.active .bg-img { transform: scale(1.1); }
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      scroll-snap-align: start;
+      overflow: hidden;
+      padding: 20px;
+    }
 
-    h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: 20px; }
-    p { font-size: clamp(1rem, 4vw, 1.4rem); font-weight: 300; line-height: 1.5; }
+    .bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      object-fit: cover;
+      opacity: 0.5;
+      transition: 1.5s;
+    }
 
-    .cta-button { margin-top: 30px; display: inline-block; padding: 15px 40px; background: #fff; color: #000; border-radius: 50px; font-weight: 800; text-decoration: none; }
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      transform: translateY(30px);
+      opacity: 0;
+      transition: 1s;
+    }
+
+    section.active .content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    section.active .bg-img {
+      transform: scale(1.1);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: clamp(1rem, 4vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 15px 40px;
+      background: #fff;
+      color: #000;
+      border-radius: 50px;
+      font-weight: 800;
+      text-decoration: none;
+    }
 
     /* FOOTER SECTOR */
-    .footer-box { background: rgba(255,255,255,0.05); padding: 40px; border-radius: var(--radius); backdrop-filter: blur(10px); width: 100%; max-width: 600px; }
-    .social-icons { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
-    .social-icons a { color: #fff; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.3); padding: 8px 15px; border-radius: 50px; }
+    .footer-box {
+      background: rgba(255,255,255,0.05);
+      padding: 40px;
+      border-radius: var(--radius);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 8px 15px;
+      border-radius: 50px;
+    }
   </style>
 </head>
+
 <body>
 
-  <button class="menu-btn" onclick="toggleMenu()">PRODUCTOS ▾</button>
+  <button
+    class="menu-btn"
+    onclick="toggleMenu()"
+    aria-label="Abrir menú de productos"
+    aria-controls="mega-menu">
+    PRODUCTOS ▾
+  </button>
 
-  <nav id="mega-menu" class="overlay-menu">
+  <nav id="mega-menu" class="overlay-menu" aria-label="Menú principal de productos">
+
     <div class="menu-grid">
+
       <div class="menu-category">
         <h3>Sillones</h3>
         <ul>
@@ -94,6 +282,7 @@
           <li><a href="../SILLONES/cubo.html">Sillón Cubo</a></li>
         </ul>
       </div>
+
       <div class="menu-category">
         <h3>Muebles</h3>
         <ul>
@@ -103,6 +292,7 @@
           <li><a href="puffs.html">Puffs</a></li>
         </ul>
       </div>
+
       <div class="menu-category">
         <h3>Textiles</h3>
         <ul>
@@ -111,85 +301,201 @@
           <li><a href="../TEXTILES/colchonetas.html">Colchonetas</a></li>
         </ul>
       </div>
+
     </div>
   </nav>
 
+
+  <!-- SILLAS DE PETIRIBÍ -->
+
   <section class="active">
-    <img src="../../IMG/MUEBLES/SILLAS/silla.jpg" class="bg-img" style="object-position: 90% center;" alt="Sillas de Petiribì">
+
+    <img
+      src="../../IMG/MUEBLES/SILLAS/silla.jpg"
+      class="bg-img"
+      style="object-position: 90% center;"
+      alt="Silla de Petiribí macizo tapizada para comedor">
+
     <div class="content">
+
       <h2>Sillas de Petiribí</h2>
-      <p>Estructura maciza de Petiribí con tapizado base en lienzo. Diseño ergonómico y calidez natural para tu comedor.</p>
+
+      <p>
+        Estructura maciza de Petiribí con tapizado base en lienzo.
+        Diseño ergonómico, resistencia y calidez natural para comedores y espacios de diseño.
+      </p>
+
     </div>
+
   </section>
 
+
+  <!-- SILLAS CON FUNDA -->
+
   <section>
-    <img src="../../IMG/MUEBLES/SILLAS/sillas-mesa.jpg" class="bg-img" alt="Sillas con Funda de Tusor">
+
+    <img
+      src="../../IMG/MUEBLES/SILLAS/sillas-mesa.jpg"
+      class="bg-img"
+      alt="Sillas de comedor con fundas desmontables de Tusor">
+
     <div class="content">
+
       <h2>Sillas con Funda</h2>
-      <p>Estética impecable y funcionalidad. Fundas desmontables de género Tusor en variedad de colores para un lavado práctico.</p>
+
+      <p>
+        Sillas tapizadas con fundas desmontables de género Tusor.
+        Una solución práctica y elegante, disponible en diferentes colores para renovar fácilmente tu ambiente.
+      </p>
+
     </div>
+
   </section>
 
+
+  <!-- BANQUETAS -->
+
   <section>
-    <img src="../../IMG/MUEBLES/BANQUETAS/banqueta-funda-2.jpg" class="bg-img" alt="Banquetas de Petiribí">
+
+    <img
+      src="../../IMG/MUEBLES/BANQUETAS/banqueta-funda-2.jpg"
+      class="bg-img"
+      alt="Banqueta alta de Petiribí con funda desmontable para barra">
+
     <div class="content">
+
       <h2>Banquetas Altas</h2>
-      <p>Ideales para barras y desayunadores. Estructura robusta de Petiribí con fundas a medida que aportan un toque rústico y chic.</p>
-      <a href="https://wa.me/5491159565865" class="cta-button">CONSULTAR POR WHATSAPP</a>
+
+      <p>
+        Banquetas altas de Petiribí para barras, islas y desayunadores.
+        Estructura robusta, diseño confortable y fundas confeccionadas a medida.
+      </p>
+
+      <a
+        href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20consultar%20por%20sillas%20y%20banquetas"
+        class="cta-button"
+        aria-label="Consultar por sillas y banquetas mediante WhatsApp">
+        CONSULTAR POR WHATSAPP
+      </a>
+
     </div>
+
   </section>
 
+
+  <!-- FOOTER -->
+
   <section>
+
     <div class="content">
+
       <div class="footer-box">
+
         <h2>Decogri</h2>
-        <p>Don Torcuato, Buenos Aires</p>
+
+        <p>
+          Don Torcuato, Buenos Aires
+        </p>
+
         <div class="social-icons">
-          <a href="https://www.instagram.com/decogriok/">Instagram</a>
-          <a href="https://www.facebook.com/Decogriok/">Facebook</a>
-          <a href="https://www.tiktok.com/@decogriok">TikTok</a>
-          <a href="../../index.html">Inicio</a>
+
+          <a
+            href="https://www.instagram.com/decogriok/"
+            aria-label="Instagram de Decogri">
+            Instagram
+          </a>
+
+          <a
+            href="https://www.facebook.com/Decogriok/"
+            aria-label="Facebook de Decogri">
+            Facebook
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@decogriok"
+            aria-label="TikTok de Decogri">
+            TikTok
+          </a>
+
+          <a
+            href="../../index.html"
+            aria-label="Volver al inicio de Decogri">
+            Inicio
+          </a>
+
         </div>
+
         <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.5;">
           © 2026 Decogri — Fabricación Nacional
         </p>
+
       </div>
+
     </div>
+
   </section>
 
+
   <script>
+
     function toggleMenu() {
+
       const menu = document.getElementById('mega-menu');
+
       menu.classList.toggle('active');
+
       if (menu.classList.contains('active')) {
+
         document.body.style.overflow = 'hidden';
+
       } else {
+
         document.body.style.overflow = 'auto';
+
       }
+
     }
 
+
     document.querySelectorAll('.menu-category a').forEach(link => {
+
       link.addEventListener('click', () => {
+
         document.getElementById('mega-menu').classList.remove('active');
+
         document.body.style.overflow = 'auto';
+
       });
+
     });
 
+
     const sections = document.querySelectorAll('section');
+
     const observerOptions = {
       threshold: 0.6
     };
 
+
     const observer = new IntersectionObserver((entries) => {
+
       entries.forEach(entry => {
+
         if (entry.isIntersecting) {
+
           sections.forEach(s => s.classList.remove('active'));
+
           entry.target.classList.add('active');
+
         }
+
       });
+
     }, observerOptions);
 
+
     sections.forEach(section => observer.observe(section));
+
   </script>
 
 </body>
