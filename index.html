@@ -89,6 +89,17 @@
         "about": {
           "@id": "https://decogri.com.ar/#business"
         },
+        "mainEntity": [
+          {
+            "@id": "https://decogri.com.ar/#sillones"
+          },
+          {
+            "@id": "https://decogri.com.ar/#muebles"
+          },
+          {
+            "@id": "https://decogri.com.ar/#textiles"
+          }
+        ],
         "inLanguage": "es-AR"
       },
 
@@ -249,10 +260,6 @@
       color: inherit;
     }
 
-    /* =========================================================
-       BOTÓN DEL NAV
-    ========================================================== */
-
     .menu-btn {
       position: fixed;
       top: 20px;
@@ -278,10 +285,6 @@
       outline: 3px solid var(--gold);
       outline-offset: 4px;
     }
-
-    /* =========================================================
-       NAV ACTUALIZADO
-    ========================================================== */
 
     .overlay-menu {
       position: fixed;
@@ -347,10 +350,6 @@
       color: var(--gold-light);
       transform: translateX(5px);
     }
-
-    /* =========================================================
-       SECCIONES
-    ========================================================== */
 
     section {
       min-height: 100vh;
@@ -458,10 +457,6 @@
       outline-offset: 4px;
     }
 
-    /* =========================================================
-       INTRO
-    ========================================================== */
-
     .intro-section {
       background:
         radial-gradient(circle at 20% 20%, rgba(212,175,55,.12), transparent 30%),
@@ -488,10 +483,6 @@
       margin: 0 auto 20px;
       max-width: 900px;
     }
-
-    /* =========================================================
-       CATÁLOGOS
-    ========================================================== */
 
     .catalog-section {
       background: #050505;
@@ -566,10 +557,6 @@
       font-size: .9rem;
     }
 
-    /* =========================================================
-       DESTACADOS
-    ========================================================== */
-
     .feature-section {
       background:
         linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.9)),
@@ -600,10 +587,6 @@
       font-size: 1.05rem;
     }
 
-    /* =========================================================
-       CTA
-    ========================================================== */
-
     .cta-section {
       background:
         radial-gradient(circle at center, rgba(212,175,55,.13), transparent 42%),
@@ -613,10 +596,6 @@
     .cta-section .section-content {
       max-width: 900px;
     }
-
-    /* =========================================================
-       FOOTER
-    ========================================================== */
 
     .footer-section {
       background:
@@ -670,10 +649,6 @@
       color: var(--gold-light);
     }
 
-    /* =========================================================
-       WHATSAPP
-    ========================================================== */
-
     .wa-float {
       position: fixed;
       right: 20px;
@@ -702,10 +677,6 @@
       height: 20px;
       fill: currentColor;
     }
-
-    /* =========================================================
-       RESPONSIVE
-    ========================================================== */
 
     @media (max-width: 900px) {
       .menu-grid,
@@ -767,10 +738,6 @@
 
 <body>
 
-  <!-- =========================================================
-       NAV ACTUALIZADO
-  ========================================================== -->
-
 <button
 class="menu-btn"
 onclick="toggleMenu()"
@@ -782,761 +749,717 @@ type="button"
 
 >
 
+PRODUCTOS ▾ </button>
 
-PRODUCTOS ▾
+<nav
+  id="mega-menu"
+  class="overlay-menu"
+  aria-label="Menú principal de productos"
+>
+
+  <div class="menu-grid">
 
 
-  </button>
+<div class="menu-category">
+  <h3>Sillones</h3>
+  <ul>
+    <li><a href="/PRODUCTOS/SILLONES/CLASICO/">Sillón Clásico</a></li>
+    <li><a href="/PRODUCTOS/SILLONES/CIRCUS/">Sillón Circus</a></li>
+    <li><a href="/PRODUCTOS/SILLONES/MARTILLO/">Sillón Martillo</a></li>
+    <li><a href="/PRODUCTOS/SILLONES/OCTA/">Sillón Octa®</a></li>
+    <li><a href="/PRODUCTOS/SILLONES/GHOST/">Sillón Ghost</a></li>
+    <li><a href="/PRODUCTOS/SILLONES/CUBO/">Sillón Cubo</a></li>
+  </ul>
+</div>
 
-  <nav
-    id="mega-menu"
-    class="overlay-menu"
-    aria-label="Menú principal de productos"
+<div class="menu-category">
+  <h3>Muebles</h3>
+  <ul>
+    <li><a href="/PRODUCTOS/MUEBLES/SILLAS-BANQUETAS/">Sillas y Banquetas</a></li>
+    <li><a href="/PRODUCTOS/MUEBLES/MESAS/">Mesas</a></li>
+    <li><a href="/PRODUCTOS/MUEBLES/RESPALDOS/">Respaldos de Cama</a></li>
+    <li><a href="/PRODUCTOS/MUEBLES/PUFF/">Puffs</a></li>
+  </ul>
+</div>
+
+<div class="menu-category">
+  <h3>Textiles</h3>
+  <ul>
+    <li><a href="/PRODUCTOS/TEXTILES/FUNDAS/">Fundas Desmontables</a></li>
+    <li><a href="/PRODUCTOS/TEXTILES/CORTINAS/">Cortinas</a></li>
+    <li><a href="/PRODUCTOS/TEXTILES/COLCHONETAS/">Colchonetas</a></li>
+  </ul>
+</div>
+
+
+  </div>
+
+</nav>
+
+<section class="hero" id="inicio">
+
+  <div class="hero-content">
+
+
+<span class="eyebrow">
+  DISEÑO · FABRICACIÓN · TAPIZADOS
+</span>
+
+<h1>Decogri</h1>
+
+<p>
+  Sillones, muebles y textiles diseñados y fabricados
+  a medida en Don Torcuato, Zona Norte de Buenos Aires.
+  Creamos piezas para hogares, espacios comerciales
+  y proyectos personalizados.
+</p>
+
+<div class="cta-row">
+
+  <a
+    href="#sillones"
+    class="cta-button"
+    aria-label="Ver sillones de Decogri"
   >
+    VER SILLONES
+  </a>
 
-
-<div class="menu-grid">
-
-  <div class="menu-category">
-    <h3>Sillones</h3>
-    <ul>
-      <li><a href="/PRODUCTOS/SILLONES/CLASICO/">Sillón Clásico</a></li>
-      <li><a href="/PRODUCTOS/SILLONES/CIRCUS/">Sillón Circus</a></li>
-      <li><a href="/PRODUCTOS/SILLONES/MARTILLO/">Sillón Martillo</a></li>
-      <li><a href="/PRODUCTOS/SILLONES/OCTA/">Sillón Octa®</a></li>
-      <li><a href="/PRODUCTOS/SILLONES/GHOST/">Sillón Ghost</a></li>
-      <li><a href="/PRODUCTOS/SILLONES/CUBO/">Sillón Cubo</a></li>
-    </ul>
-  </div>
-
-  <div class="menu-category">
-    <h3>Muebles</h3>
-    <ul>
-      <li><a href="/PRODUCTOS/MUEBLES/SILLAS-BANQUETAS/">Sillas y Banquetas</a></li>
-      <li><a href="/PRODUCTOS/MUEBLES/MESAS/">Mesas</a></li>
-      <li><a href="/PRODUCTOS/MUEBLES/RESPALDOS/">Respaldos de Cama</a></li>
-      <li><a href="/PRODUCTOS/MUEBLES/PUFF/">Puffs</a></li>
-    </ul>
-  </div>
-
-  <div class="menu-category">
-    <h3>Textiles</h3>
-    <ul>
-      <li><a href="/PRODUCTOS/TEXTILES/FUNDAS/">Fundas Desmontables</a></li>
-      <li><a href="/PRODUCTOS/TEXTILES/CORTINAS/">Cortinas</a></li>
-      <li><a href="/PRODUCTOS/TEXTILES/COLCHONETAS/">Colchonetas</a></li>
-    </ul>
-  </div>
-
-</div>
-
-
-  </nav>
-
-  <!-- =========================================================
-       HERO
-  ========================================================== -->
-
-  <section class="hero" id="inicio">
-
-
-<div class="hero-content">
-
-  <span class="eyebrow">
-    DISEÑO · FABRICACIÓN · TAPIZADOS
-  </span>
-
-  <h1>Decogri</h1>
-
-  <p>
-    Sillones, muebles y textiles diseñados y fabricados
-    a medida en Don Torcuato, Zona Norte de Buenos Aires.
-    Creamos piezas para hogares, espacios comerciales
-    y proyectos personalizados.
-  </p>
-
-  <div class="cta-row">
-
-    <a
-      href="#sillones"
-      class="cta-button"
-      aria-label="Ver sillones de Decogri"
-    >
-      VER SILLONES
-    </a>
-
-    <a
-      href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20consultar%20por%20un%20producto%20a%20medida."
-      class="cta-button gold"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Consultar a Decogri por WhatsApp"
-    >
-      CONSULTAR POR WHATSAPP
-    </a>
-
-  </div>
-
-</div>
-
-
-  </section>
-
-  <!-- =========================================================
-       INTRODUCCIÓN
-  ========================================================== -->
-
-  <section class="intro-section">
-
-
-<div class="section-content">
-
-  <span class="eyebrow">
-    FABRICACIÓN PROPIA
-  </span>
-
-  <h2>
-    Muebles y textiles hechos a medida
-  </h2>
-
-  <p>
-    En Decogri trabajamos cada proyecto de manera personalizada,
-    combinando diseño, materiales y tapizados para crear muebles
-    adaptados a cada ambiente.
-  </p>
-
-  <p>
-    Fabricamos en Don Torcuato y atendemos proyectos de
-    Zona Norte de Buenos Aires y otras localidades del país.
-    Nuestro catálogo incluye sillones, mesas, sillas,
-    banquetas, respaldos de cama, puffs y textiles.
-  </p>
-
-  <div class="cta-row">
-
-    <a
-      href="/PRODUCTOS/MUEBLES/"
-      class="cta-button"
-    >
-      VER MUEBLES
-    </a>
-
-    <a
-      href="/PRODUCTOS/TEXTILES/FUNDAS/"
-      class="cta-button gold"
-    >
-      VER TEXTILES
-    </a>
-
-  </div>
-
-</div>
-
-
-  </section>
-
-  <!-- =========================================================
-       CATÁLOGO · SILLONES
-  ========================================================== -->
-
-  <section
-    class="catalog-section"
-    id="sillones"
+  <a
+    href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20consultar%20por%20un%20producto%20a%20medida."
+    class="cta-button gold"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Consultar a Decogri por WhatsApp"
   >
-
-
-<div class="catalog-inner">
-
-  <span class="catalog-label">
-    MOBILIARIO DE DISEÑO
-  </span>
-
-  <h2>
-    Sillones
-  </h2>
-
-  <div class="catalog-grid">
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/SILLONES/CLASICO/clasico-frente.jpg"
-        alt="Sillón Clásico fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Sillón Clásico</h3>
-        <p>
-          Diseño versátil y atemporal, fabricado a medida
-          y disponible en diferentes tapizados.
-        </p>
-        <a href="/PRODUCTOS/SILLONES/CLASICO/">
-          VER SILLÓN →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/SILLONES/CIRCUS/circus-clasico.jpg"
-        alt="Sillón Circus fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Sillón Circus</h3>
-        <p>
-          Una pieza de diseño con diferentes posibilidades
-          de tapizado y configuración.
-        </p>
-        <a href="/PRODUCTOS/SILLONES/CIRCUS/">
-          VER SILLÓN →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/SILLONES/MARTILLO/martillo.jpg"
-        alt="Sillón Martillo fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Sillón Martillo</h3>
-        <p>
-          Diseño de líneas marcadas y presencia arquitectónica
-          para ambientes contemporáneos.
-        </p>
-        <a href="/PRODUCTOS/SILLONES/MARTILLO/">
-          VER SILLÓN →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/SILLONES/OCTA/octa.jpg"
-        alt="Sillón Octa fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Sillón Octa®</h3>
-        <p>
-          Diseño geométrico de líneas contemporáneas,
-          desarrollado como pieza de mobiliario de autor.
-        </p>
-        <a href="/PRODUCTOS/SILLONES/OCTA/">
-          VER SILLÓN →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/SILLONES/GHOST/ghost-perfil1.jpg"
-        alt="Sillón Ghost fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Sillón Ghost</h3>
-        <p>
-          Una propuesta de diseño contemporáneo para
-          espacios residenciales y comerciales.
-        </p>
-        <a href="/PRODUCTOS/SILLONES/GHOST/">
-          VER SILLÓN →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/SILLONES/CUBO/sillon-cubo.jpg"
-        alt="Sillón Cubo fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Sillón Cubo</h3>
-        <p>
-          Volumen compacto y estética contemporánea
-          para distintos tipos de ambientes.
-        </p>
-        <a href="/PRODUCTOS/SILLONES/CUBO/">
-          VER SILLÓN →
-        </a>
-      </div>
-    </article>
-
-  </div>
+    CONSULTAR POR WHATSAPP
+  </a>
 
 </div>
 
 
-  </section>
-
-  <!-- =========================================================
-       RESPALDOS DE CAMA
-  ========================================================== -->
-
-  <section class="catalog-section" id="respaldos">
-
-
-<div class="catalog-inner">
-
-  <span class="catalog-label">
-    DORMITORIO
-  </span>
-
-  <h2>
-    Respaldos de Cama
-  </h2>
-
-  <div class="catalog-grid">
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/canelon.jpg"
-        alt="Respaldo de cama Canelón fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Canelón</h3>
-        <p>
-          Respaldo tapizado de líneas verticales,
-          fabricado a medida.
-        </p>
-        <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
-          VER RESPALDOS →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/clasico.jpg"
-        alt="Respaldo de cama Clásico fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Clásico</h3>
-        <p>
-          Diseño limpio y atemporal para dormitorios
-          de diferentes estilos.
-        </p>
-        <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
-          VER RESPALDOS →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/clasico2.jpg"
-        alt="Respaldo de cama tapizado Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Diseños Tapizados</h3>
-        <p>
-          Diferentes terminaciones y posibilidades
-          de personalización.
-        </p>
-        <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
-          VER MODELOS →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/funda-rustica1.jpg"
-        alt="Respaldo de cama con funda desmontable Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Funda Desmontable</h3>
-        <p>
-          Alternativas con fundas para renovar fácilmente
-          el dormitorio.
-        </p>
-        <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
-          VER MODELOS →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/respaldo-tachas.jpg"
-        alt="Respaldo de cama con tachas fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Con Tachas</h3>
-        <p>
-          Una terminación decorativa para proyectos
-          de estilo clásico y sofisticado.
-        </p>
-        <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
-          VER RESPALDOS →
-        </a>
-      </div>
-    </article>
-
   </div>
 
-  <div class="cta-row">
-    <a
-      href="/PRODUCTOS/MUEBLES/RESPALDOS/"
-      class="cta-button gold"
-    >
-      VER RESPALDOS DE CAMA
-    </a>
-  </div>
+</section>
+
+<section class="intro-section">
+
+  <div class="section-content">
+
+
+<span class="eyebrow">
+  FABRICACIÓN PROPIA
+</span>
+
+<h2>
+  Muebles y textiles hechos a medida
+</h2>
+
+<p>
+  En Decogri trabajamos cada proyecto de manera personalizada,
+  combinando diseño, materiales y tapizados para crear muebles
+  adaptados a cada ambiente.
+</p>
+
+<p>
+  Fabricamos en Don Torcuato y atendemos proyectos de
+  Zona Norte de Buenos Aires y otras localidades del país.
+  Nuestro catálogo incluye sillones, mesas, sillas,
+  banquetas, respaldos de cama, puffs y textiles.
+</p>
+
+<div class="cta-row">
+
+  <a
+    href="#muebles"
+    class="cta-button"
+  >
+    VER MUEBLES
+  </a>
+
+  <a
+    href="/PRODUCTOS/TEXTILES/FUNDAS/"
+    class="cta-button gold"
+  >
+    VER TEXTILES
+  </a>
 
 </div>
 
 
-  </section>
-
-  <!-- =========================================================
-       MUEBLES
-  ========================================================== -->
-
-  <section class="catalog-section" id="muebles">
-
-
-<div class="catalog-inner">
-
-  <span class="catalog-label">
-    MOBILIARIO
-  </span>
-
-  <h2>
-    Muebles a Medida
-  </h2>
-
-  <div class="catalog-grid">
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/MUEBLES/SILLAS/silla.jpg"
-        alt="Silla de Petiribí fabricada por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Sillas y Banquetas</h3>
-        <p>
-          Sillas y banquetas fabricadas a medida,
-          con diferentes opciones de madera y tapizado.
-        </p>
-        <a href="/PRODUCTOS/MUEBLES/SILLAS-BANQUETAS/">
-          VER MUEBLES →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/MUEBLES/MESAS/INTERIOR/microcemento2.jpg"
-        alt="Mesa de diseño fabricada por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Mesas</h3>
-        <p>
-          Mesas para interior y exterior realizadas
-          con diferentes materiales y terminaciones.
-        </p>
-        <a href="/PRODUCTOS/MUEBLES/MESAS/">
-          VER MESAS →
-        </a>
-      </div>
-    </article>
-
-    <article class="catalog-card">
-      <img
-        src="/IMG/TEXTILES/PUFFS/INTERIOR/puff-interior2.jpg"
-        alt="Puff de interior fabricado por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Puffs</h3>
-        <p>
-          Puffs de interior y exterior para sumar
-          confort y funcionalidad a los ambientes.
-        </p>
-        <a href="/PRODUCTOS/MUEBLES/PUFF/">
-          VER PUFFS →
-        </a>
-      </div>
-    </article>
-
   </div>
+
+</section>
+
+<section
+  class="catalog-section"
+  id="sillones"
+>
+
+  <div class="catalog-inner">
+
+
+<span class="catalog-label">
+  MOBILIARIO DE DISEÑO
+</span>
+
+<h2>
+  Sillones
+</h2>
+
+<div class="catalog-grid">
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/SILLONES/CLASICO/clasico-frente.jpg"
+      alt="Sillón Clásico fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Sillón Clásico</h3>
+      <p>
+        Diseño versátil y atemporal, fabricado a medida
+        y disponible en diferentes tapizados.
+      </p>
+      <a href="/PRODUCTOS/SILLONES/CLASICO/">
+        VER SILLÓN →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/SILLONES/CIRCUS/circus-clasico.jpg"
+      alt="Sillón Circus fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Sillón Circus</h3>
+      <p>
+        Una pieza de diseño con diferentes posibilidades
+        de tapizado y configuración.
+      </p>
+      <a href="/PRODUCTOS/SILLONES/CIRCUS/">
+        VER SILLÓN →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/SILLONES/MARTILLO/martillo.jpg"
+      alt="Sillón Martillo fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Sillón Martillo</h3>
+      <p>
+        Diseño de líneas marcadas y presencia arquitectónica
+        para ambientes contemporáneos.
+      </p>
+      <a href="/PRODUCTOS/SILLONES/MARTILLO/">
+        VER SILLÓN →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/SILLONES/OCTA/octa.jpg"
+      alt="Sillón Octa fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Sillón Octa®</h3>
+      <p>
+        Diseño geométrico de líneas contemporáneas,
+        desarrollado como pieza de mobiliario de autor.
+      </p>
+      <a href="/PRODUCTOS/SILLONES/OCTA/">
+        VER SILLÓN →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/SILLONES/GHOST/ghost-perfil1.jpg"
+      alt="Sillón Ghost fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Sillón Ghost</h3>
+      <p>
+        Una propuesta de diseño contemporáneo para
+        espacios residenciales y comerciales.
+      </p>
+      <a href="/PRODUCTOS/SILLONES/GHOST/">
+        VER SILLÓN →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/SILLONES/CUBO/sillon-cubo.jpg"
+      alt="Sillón Cubo fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Sillón Cubo</h3>
+      <p>
+        Volumen compacto y estética contemporánea
+        para distintos tipos de ambientes.
+      </p>
+      <a href="/PRODUCTOS/SILLONES/CUBO/">
+        VER SILLÓN →
+      </a>
+    </div>
+  </article>
 
 </div>
 
 
-  </section>
+  </div>
 
-  <!-- =========================================================
-       TEXTILES
-  ========================================================== -->
+</section>
 
-  <section class="catalog-section" id="textiles">
+<section class="catalog-section" id="respaldos">
+
+  <div class="catalog-inner">
 
 
-<div class="catalog-inner">
+<span class="catalog-label">
+  DORMITORIO
+</span>
 
-  <span class="catalog-label">
-    TEXTILES
-  </span>
+<h2>
+  Respaldos de Cama
+</h2>
 
-  <h2>
-    Textiles a Medida
-  </h2>
+<div class="catalog-grid">
 
-  <div class="catalog-grid">
+  <article class="catalog-card">
+    <img
+      src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/canelon.jpg"
+      alt="Respaldo de cama Canelón fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Canelón</h3>
+      <p>
+        Respaldo tapizado de líneas verticales,
+        fabricado a medida.
+      </p>
+      <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
+        VER RESPALDOS →
+      </a>
+    </div>
+  </article>
 
-    <article class="catalog-card">
-      <img
-        src="/IMG/TEXTILES/FUNDAS/SILLAS/fundas-silla3.jpg"
-        alt="Fundas para muebles confeccionadas a medida por Decogri"
-        loading="lazy"
-        decoding="async"
-      >
-      <div class="catalog-card-body">
-        <h3>Fundas Desmontables</h3>
-        <p>
-          Fundas confeccionadas a medida para sillones,
-          sillas y diferentes muebles.
-        </p>
-        <a href="/PRODUCTOS/TEXTILES/FUNDAS/">
-          VER FUNDAS →
-        </a>
-      </div>
-    </article>
+  <article class="catalog-card">
+    <img
+      src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/clasico.jpg"
+      alt="Respaldo de cama Clásico fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Clásico</h3>
+      <p>
+        Diseño limpio y atemporal para dormitorios
+        de diferentes estilos.
+      </p>
+      <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
+        VER RESPALDOS →
+      </a>
+    </div>
+  </article>
 
-    <article class="catalog-card">
-      <div class="catalog-card-body">
-        <h3>Cortinas</h3>
-        <p>
-          Textiles para completar proyectos de interiorismo
-          con soluciones confeccionadas a medida.
-        </p>
-        <a href="/PRODUCTOS/TEXTILES/CORTINAS/">
-          VER CORTINAS →
-        </a>
-      </div>
-    </article>
+  <article class="catalog-card">
+    <img
+      src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/clasico2.jpg"
+      alt="Respaldo de cama tapizado Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Diseños Tapizados</h3>
+      <p>
+        Diferentes terminaciones y posibilidades
+        de personalización.
+      </p>
+      <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
+        VER MODELOS →
+      </a>
+    </div>
+  </article>
 
-    <article class="catalog-card">
-      <div class="catalog-card-body">
-        <h3>Colchonetas</h3>
-        <p>
-          Colchonetas personalizadas para interior,
-          exterior y diferentes tipos de mobiliario.
-        </p>
-        <a href="/PRODUCTOS/TEXTILES/COLCHONETAS/">
-          VER COLCHONETAS →
-        </a>
-      </div>
-    </article>
+  <article class="catalog-card">
+    <img
+      src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/funda-rustica1.jpg"
+      alt="Respaldo de cama con funda desmontable Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Funda Desmontable</h3>
+      <p>
+        Alternativas con fundas para renovar fácilmente
+        el dormitorio.
+      </p>
+      <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
+        VER MODELOS →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/MUEBLES/RESPALDOS-DE-CAMA/respaldo-tachas.jpg"
+      alt="Respaldo de cama con tachas fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Con Tachas</h3>
+      <p>
+        Una terminación decorativa para proyectos
+        de estilo clásico y sofisticado.
+      </p>
+      <a href="/PRODUCTOS/MUEBLES/RESPALDOS/">
+        VER RESPALDOS →
+      </a>
+    </div>
+  </article>
+
+</div>
+
+<div class="cta-row">
+  <a
+    href="/PRODUCTOS/MUEBLES/RESPALDOS/"
+    class="cta-button gold"
+  >
+    VER RESPALDOS DE CAMA
+  </a>
+</div>
+
 
   </div>
+
+</section>
+
+<section class="catalog-section" id="muebles">
+
+  <div class="catalog-inner">
+
+
+<span class="catalog-label">
+  MOBILIARIO
+</span>
+
+<h2>
+  Muebles a Medida
+</h2>
+
+<div class="catalog-grid">
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/MUEBLES/SILLAS/silla.jpg"
+      alt="Silla de Petiribí fabricada por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Sillas y Banquetas</h3>
+      <p>
+        Sillas y banquetas fabricadas a medida,
+        con diferentes opciones de madera y tapizado.
+      </p>
+      <a href="/PRODUCTOS/MUEBLES/SILLAS-BANQUETAS/">
+        VER MUEBLES →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/MUEBLES/MESAS/INTERIOR/microcemento2.jpg"
+      alt="Mesa de diseño fabricada por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Mesas</h3>
+      <p>
+        Mesas para interior y exterior realizadas
+        con diferentes materiales y terminaciones.
+      </p>
+      <a href="/PRODUCTOS/MUEBLES/MESAS/">
+        VER MESAS →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/TEXTILES/PUFFS/INTERIOR/puff-interior2.jpg"
+      alt="Puff de interior fabricado por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Puffs</h3>
+      <p>
+        Puffs de interior y exterior para sumar
+        confort y funcionalidad a los ambientes.
+      </p>
+      <a href="/PRODUCTOS/MUEBLES/PUFF/">
+        VER PUFFS →
+      </a>
+    </div>
+  </article>
 
 </div>
 
 
-  </section>
-
-  <!-- =========================================================
-       DESTACADO
-  ========================================================== -->
-
-  <section class="feature-section">
-
-
-<div class="feature-box">
-
-  <span class="eyebrow">
-    DISEÑO PERSONALIZADO
-  </span>
-
-  <h2>
-    Creamos muebles para espacios únicos
-  </h2>
-
-  <p>
-    Desde una pieza individual hasta proyectos completos,
-    trabajamos medidas, materiales, tapizados y terminaciones
-    para conseguir un resultado acorde a cada ambiente.
-  </p>
-
-  <div class="cta-row">
-
-    <a
-      href="/CONTACTO/"
-      class="cta-button"
-    >
-      CONTACTAR A DECOGRI
-    </a>
-
-    <a
-      href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20hacer%20una%20consulta%20sobre%20un%20proyecto%20a%20medida."
-      class="cta-button gold"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      CONSULTAR POR WHATSAPP
-    </a>
-
   </div>
+
+</section>
+
+<section class="catalog-section" id="textiles">
+
+  <div class="catalog-inner">
+
+
+<span class="catalog-label">
+  TEXTILES
+</span>
+
+<h2>
+  Textiles a Medida
+</h2>
+
+<div class="catalog-grid">
+
+  <article class="catalog-card">
+    <img
+      src="/IMG/TEXTILES/FUNDAS/SILLAS/fundas-silla3.jpg"
+      alt="Fundas para muebles confeccionadas a medida por Decogri"
+      loading="lazy"
+      decoding="async"
+    >
+    <div class="catalog-card-body">
+      <h3>Fundas Desmontables</h3>
+      <p>
+        Fundas confeccionadas a medida para sillones,
+        sillas y diferentes muebles.
+      </p>
+      <a href="/PRODUCTOS/TEXTILES/FUNDAS/">
+        VER FUNDAS →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="catalog-card-body">
+      <h3>Cortinas</h3>
+      <p>
+        Textiles para completar proyectos de interiorismo
+        con soluciones confeccionadas a medida.
+      </p>
+      <a href="/PRODUCTOS/TEXTILES/CORTINAS/">
+        VER CORTINAS →
+      </a>
+    </div>
+  </article>
+
+  <article class="catalog-card">
+    <div class="catalog-card-body">
+      <h3>Colchonetas</h3>
+      <p>
+        Colchonetas personalizadas para interior,
+        exterior y diferentes tipos de mobiliario.
+      </p>
+      <a href="/PRODUCTOS/TEXTILES/COLCHONETAS/">
+        VER COLCHONETAS →
+      </a>
+    </div>
+  </article>
 
 </div>
 
 
-  </section>
-
-  <!-- =========================================================
-       CTA FINAL
-  ========================================================== -->
-
-  <section class="cta-section">
-
-
-<div class="section-content">
-
-  <span class="eyebrow">
-    DECOGRI · DON TORCUATO
-  </span>
-
-  <h2>
-    ¿Tenés un proyecto en mente?
-  </h2>
-
-  <p>
-    Contanos qué necesitás, las medidas aproximadas y el
-    tipo de terminación que buscás. Podemos ayudarte a
-    desarrollar una propuesta a medida.
-  </p>
-
-  <div class="cta-row">
-
-    <a
-      href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20consultar%20por%20un%20proyecto%20a%20medida."
-      class="cta-button gold"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      HABLAR POR WHATSAPP
-    </a>
-
-    <a
-      href="/CONTACTO/"
-      class="cta-button"
-    >
-      CONTACTO
-    </a>
-
   </div>
+
+</section>
+
+<section class="feature-section">
+
+  <div class="feature-box">
+
+
+<span class="eyebrow">
+  DISEÑO PERSONALIZADO
+</span>
+
+<h2>
+  Creamos muebles para espacios únicos
+</h2>
+
+<p>
+  Desde una pieza individual hasta proyectos completos,
+  trabajamos medidas, materiales, tapizados y terminaciones
+  para conseguir un resultado acorde a cada ambiente.
+</p>
+
+<div class="cta-row">
+
+  <a
+    href="/CONTACTO/"
+    class="cta-button"
+  >
+    CONTACTAR A DECOGRI
+  </a>
+
+  <a
+    href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20hacer%20una%20consulta%20sobre%20un%20proyecto%20a%20medida."
+    class="cta-button gold"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    CONSULTAR POR WHATSAPP
+  </a>
 
 </div>
 
 
-  </section>
-
-  <!-- =========================================================
-       FOOTER
-  ========================================================== -->
-
-  <section class="footer-section">
-
-
-<div class="footer-box">
-
-  <h2>Decogri</h2>
-
-  <p>
-    Fabricación de muebles, sillones y textiles a medida.
-  </p>
-
-  <p>
-    Don Torcuato, Buenos Aires.
-  </p>
-
-  <p>
-    Atención y fabricación con coordinación previa.
-  </p>
-
-  <p>
-    <a href="/CONTACTO/">
-      Contacto
-    </a>
-  </p>
-
-  <div class="social-icons">
-
-    <a
-      href="https://www.instagram.com/decogriok/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Instagram de Decogri"
-    >
-      Instagram
-    </a>
-
-    <a
-      href="https://www.facebook.com/Decogriok/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Facebook de Decogri"
-    >
-      Facebook
-    </a>
-
-    <a
-      href="https://www.tiktok.com/@decogriok"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="TikTok de Decogri"
-    >
-      TikTok
-    </a>
-
-    <a
-      href="/CONTACTO/"
-      aria-label="Página de contacto de Decogri"
-    >
-      Contacto
-    </a>
-
   </div>
 
-  <p style="margin-top:40px;font-size:.8rem;opacity:.55;">
-    © 2026 Decogri — Fabricación Nacional
-  </p>
+</section>
+
+<section class="cta-section">
+
+  <div class="section-content">
+
+
+<span class="eyebrow">
+  DECOGRI · DON TORCUATO
+</span>
+
+<h2>
+  ¿Tenés un proyecto en mente?
+</h2>
+
+<p>
+  Contanos qué necesitás, las medidas aproximadas y el
+  tipo de terminación que buscás. Podemos ayudarte a
+  desarrollar una propuesta a medida.
+</p>
+
+<div class="cta-row">
+
+  <a
+    href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20consultar%20por%20un%20proyecto%20a%20medida."
+    class="cta-button gold"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    HABLAR POR WHATSAPP
+  </a>
+
+  <a
+    href="/CONTACTO/"
+    class="cta-button"
+  >
+    CONTACTO
+  </a>
 
 </div>
 
 
-  </section>
+  </div>
 
-  <!-- =========================================================
-       WHATSAPP FLOTANTE
-  ========================================================== -->
+</section>
+
+<section class="footer-section">
+
+  <div class="footer-box">
+
+
+<h2>Decogri</h2>
+
+<p>
+  Fabricación de muebles, sillones y textiles a medida.
+</p>
+
+<p>
+  Don Torcuato, Buenos Aires.
+</p>
+
+<p>
+  Atención y fabricación con coordinación previa.
+</p>
+
+<p>
+  <a href="/CONTACTO/">
+    Contacto
+  </a>
+</p>
+
+<div class="social-icons">
+
+  <a
+    href="https://www.instagram.com/decogriok/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram de Decogri"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="https://www.facebook.com/Decogriok/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook de Decogri"
+  >
+    Facebook
+  </a>
+
+  <a
+    href="https://www.tiktok.com/@decogriok"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok de Decogri"
+  >
+    TikTok
+  </a>
+
+  <a
+    href="/CONTACTO/"
+    aria-label="Página de contacto de Decogri"
+  >
+    Contacto
+  </a>
+
+</div>
+
+<p style="margin-top:40px;font-size:.8rem;opacity:.55;">
+  © 2026 Decogri — Fabricación Nacional
+</p>
+
+
+  </div>
+
+</section>
 
 <a
 href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20consultar%20por%20un%20producto."
@@ -1547,104 +1470,106 @@ aria-label="Consultar con Decogri por WhatsApp"
 
 >
 
-
 <svg
-  class="wa-icon"
-  viewBox="0 0 24 24"
-  aria-hidden="true"
+class="wa-icon"
+viewBox="0 0 24 24"
+aria-hidden="true"
+
 >
-  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.372-.025-.52-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.851 1.213 3.049.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-  <path d="M20.52 3.449A11.823 11.823 0 0 0 12.04 0C5.495 0 .17 5.325.17 11.87c0 2.092.546 4.135 1.584 5.937L.07 24l6.337-1.663a11.86 11.86 0 0 0 5.628 1.432h.005c6.545 0 11.87-5.325 11.87-11.87a11.82 11.82 0 0 0-3.39-8.45zM12.04 21.77h-.004a9.85 9.85 0 0 1-5.023-1.376l-.36-.214-3.76.986 1.004-3.665-.234-.376a9.84 9.84 0 0 1-1.51-5.255c0-5.437 4.425-9.862 9.867-9.862a9.81 9.81 0 0 1 6.992 2.897 9.81 9.81 0 0 1 2.892 6.995c-.003 5.44-4.428 9.87-9.864 9.87z"/>
-</svg>
+
+
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.372-.025-.52-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.851 1.213 3.049.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+
+
+
+<path d="M20.52 3.449A11.823 11.823 0 0 0 12.04 0C5.495 0 .17 5.325.17 11.87c0 2.092.546 4.135 1.584 5.937L.07 24l6.337-1.663a11.86 11.86 0 0 0 5.628 1.432h.005c6.545 0 11.87-5.325 11.87-11.87a11.82 11.82 0 0 0-3.39-8.45zM12.04 21.77h-.004a9.85 9.85 0 0 1-5.023-1.376l-.36-.214-3.76.986 1.004-3.665-.234-.376a9.84 9.84 0 0 1-1.51-5.255c0-5.437 4.425-9.862 9.867-9.862a9.81 9.81 0 0 1 6.992 2.897 9.81 9.81 0 0 1 2.892 6.995c-.003 5.44-4.428 9.87-9.864 9.87z"/>
+
+
+  </svg>
 
 WhatsApp
 
+</a>
 
-  </a>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mega-menu');
+    const btn = document.getElementById('btn-txt');
 
-  <!-- =========================================================
-       JAVASCRIPT
-  ========================================================== -->
+    menu.classList.toggle('active');
 
-  <script>
-    function toggleMenu() {
+    const abierto = menu.classList.contains('active');
+
+    document.body.style.overflow = abierto ? 'hidden' : 'auto';
+
+    btn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+    btn.setAttribute(
+      'aria-label',
+      abierto
+        ? 'Cerrar menú de productos'
+        : 'Abrir menú de productos'
+    );
+
+    btn.innerHTML = abierto
+      ? 'CERRAR ✕'
+      : 'PRODUCTOS ▾';
+  }
+
+  document.querySelectorAll('.menu-category a').forEach(link => {
+    link.addEventListener('click', () => {
       const menu = document.getElementById('mega-menu');
       const btn = document.getElementById('btn-txt');
 
-      menu.classList.toggle('active');
+      menu.classList.remove('active');
 
-      const abierto = menu.classList.contains('active');
+      document.body.style.overflow = 'auto';
 
-      document.body.style.overflow = abierto ? 'hidden' : 'auto';
-
-      btn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+      btn.innerHTML = 'PRODUCTOS ▾';
+      btn.setAttribute('aria-expanded', 'false');
       btn.setAttribute(
         'aria-label',
-        abierto
-          ? 'Cerrar menú de productos'
-          : 'Abrir menú de productos'
+        'Abrir menú de productos'
       );
-
-      btn.innerHTML = abierto
-        ? 'CERRAR ✕'
-        : 'PRODUCTOS ▾';
-    }
-
-    document.querySelectorAll('.menu-category a').forEach(link => {
-      link.addEventListener('click', () => {
-        const menu = document.getElementById('mega-menu');
-        const btn = document.getElementById('btn-txt');
-
-        menu.classList.remove('active');
-
-        document.body.style.overflow = 'auto';
-
-        btn.innerHTML = 'PRODUCTOS ▾';
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute(
-          'aria-label',
-          'Abrir menú de productos'
-        );
-      });
     });
+  });
 
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') {
-        const menu = document.getElementById('mega-menu');
-        const btn = document.getElementById('btn-txt');
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      const menu = document.getElementById('mega-menu');
+      const btn = document.getElementById('btn-txt');
 
-        menu.classList.remove('active');
+      menu.classList.remove('active');
 
-        document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
 
-        btn.innerHTML = 'PRODUCTOS ▾';
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute(
-          'aria-label',
-          'Abrir menú de productos'
-        );
+      btn.innerHTML = 'PRODUCTOS ▾';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute(
+        'aria-label',
+        'Abrir menú de productos'
+      );
+    }
+  });
+
+  const sections = document.querySelectorAll('section');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      },
+      {
+        threshold: 0.25
       }
-    });
+    );
 
-    const sections = document.querySelectorAll('section');
-
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-            }
-          });
-        },
-        {
-          threshold: 0.25
-        }
-      );
-
-      sections.forEach(section => observer.observe(section));
-    }
-  </script>
+    sections.forEach(section => observer.observe(section));
+  }
+</script>
 
 </body>
 </html>
