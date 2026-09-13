@@ -7,11 +7,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 exclude-result-prefixes="sitemap image">
 
 
-<xsl:output
-    method="html"
-    version="1.0"
-    encoding="UTF-8"
-    indent="yes"/>
+<xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes"/>
 
 <xsl:template match="/">
 
@@ -20,48 +16,37 @@ exclude-result-prefixes="sitemap image">
         <head>
 
             <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-            <meta name="viewport"
-                  content="width=device-width, initial-scale=1.0"/>
-
-            <meta name="robots"
-                  content="noindex,follow"/>
+            <meta name="robots" content="noindex,follow"/>
 
             <title>Decogri | Sitemap XML</title>
 
-            <link
-                rel="icon"
-                type="image/jpeg"
-                href="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg"/>
+            <link rel="icon"
+                  type="image/jpeg"
+                  href="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg"/>
 
             <style>
-
                 :root {
-                    --bg-main: #f6f8fa;
-                    --card-bg: #ffffff;
-                    --text-main: #0b0f19;
-                    --text-muted: #64748b;
-                    --accent-gold: #bf953f;
-                    --accent-gold-light: rgba(191,149,63,0.07);
-                    --border-color: #e2e8f0;
-                    --dark: #0f172a;
-                    --success: #10b981;
-                    --radius: 14px;
+                    --bg: #f5f6f8;
+                    --card: #ffffff;
+                    --text: #10141c;
+                    --muted: #687386;
+                    --gold: #bf953f;
+                    --line: #e4e7ec;
+                    --dark: #111827;
+                    --green: #10b981;
                 }
 
                 * {
                     box-sizing: border-box;
                 }
 
-                html {
-                    scroll-behavior: smooth;
-                }
-
                 body {
                     margin: 0;
-                    padding: 50px 20px;
-                    background: var(--bg-main);
-                    color: var(--text-main);
+                    padding: 40px 18px;
+                    background: var(--bg);
+                    color: var(--text);
                     font-family:
                         -apple-system,
                         BlinkMacSystemFont,
@@ -70,140 +55,112 @@ exclude-result-prefixes="sitemap image">
                         Helvetica,
                         Arial,
                         sans-serif;
-                    -webkit-font-smoothing: antialiased;
                 }
 
                 .container {
                     width: 100%;
                     max-width: 1150px;
-                    margin: 0 auto;
-                    background: var(--card-bg);
-                    border: 1px solid var(--border-color);
-                    border-radius: var(--radius);
-                    box-shadow:
-                        0 20px 45px rgba(15,23,42,0.05);
+                    margin: auto;
+                    background: var(--card);
+                    border: 1px solid var(--line);
+                    border-radius: 14px;
                     overflow: hidden;
+                    box-shadow: 0 18px 45px rgba(15,23,42,.06);
                 }
 
-                .header-area {
+                .header {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    gap: 30px;
-                    padding: 32px 38px;
-                    border-bottom: 1px solid var(--border-color);
+                    gap: 25px;
+                    padding: 30px 35px;
+                    border-bottom: 1px solid var(--line);
                 }
 
-                .brand-group {
+                .brand {
                     display: flex;
                     align-items: center;
-                    gap: 20px;
-                    min-width: 0;
+                    gap: 18px;
                 }
 
-                .logo-wrapper {
-                    flex: 0 0 auto;
-                }
-
-                .logo-wrapper img {
-                    width: 72px;
-                    height: 72px;
+                .brand img {
+                    width: 68px;
+                    height: 68px;
                     object-fit: contain;
-                    border-radius: 10px;
-                    filter:
-                        drop-shadow(
-                            0 5px 12px
-                            rgba(191,149,63,0.15)
-                        );
-                }
-
-                .brand-info {
-                    min-width: 0;
+                    border-radius: 9px;
                 }
 
                 h1 {
-                    margin: 0 0 8px;
+                    margin: 0 0 7px;
                     font-size: 21px;
                     line-height: 1.2;
-                    font-weight: 700;
-                    letter-spacing: -0.5px;
                 }
 
                 h1 span {
                     display: inline-block;
-                    margin-left: 8px;
+                    margin-left: 7px;
                     padding: 4px 8px;
-                    border-radius: 6px;
-                    border: 1px solid rgba(191,149,63,0.25);
-                    background: var(--accent-gold-light);
-                    color: var(--accent-gold);
-                    font-size: 11px;
-                    font-weight: 600;
-                    letter-spacing: 0.3px;
+                    border: 1px solid rgba(191,149,63,.25);
+                    border-radius: 5px;
+                    color: var(--gold);
+                    background: rgba(191,149,63,.07);
+                    font-size: 10px;
                     vertical-align: middle;
                 }
 
-                .desc {
+                .description {
                     margin: 0;
-                    color: var(--text-muted);
+                    color: var(--muted);
                     font-size: 13px;
-                    line-height: 1.6;
+                    line-height: 1.5;
                 }
 
                 .counter {
-                    display: flex;
-                    align-items: center;
-                    gap: 9px;
-                    flex: 0 0 auto;
+                    flex-shrink: 0;
                     padding: 11px 16px;
-                    background: var(--dark);
-                    color: #f8fafc;
                     border-radius: 8px;
+                    background: var(--dark);
+                    color: white;
                     font-size: 11px;
                     font-weight: 700;
-                    letter-spacing: 0.5px;
                     white-space: nowrap;
                 }
 
-                .counter span {
-                    width: 8px;
-                    height: 8px;
+                .counter-dot {
                     display: inline-block;
+                    width: 7px;
+                    height: 7px;
+                    margin-right: 7px;
                     border-radius: 50%;
-                    background: var(--success);
-                    box-shadow:
-                        0 0 10px rgba(16,185,129,0.8);
+                    background: var(--green);
                 }
 
-                .info-bar {
+                .info {
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
-                    gap: 10px;
-                    padding: 18px 38px;
+                    gap: 9px;
+                    padding: 17px 35px;
                     background: #fafafa;
-                    border-bottom: 1px solid var(--border-color);
+                    border-bottom: 1px solid var(--line);
                 }
 
-                .info-label {
-                    color: var(--text-muted);
-                    font-size: 11px;
+                .label {
+                    color: var(--muted);
+                    font-size: 10px;
                     font-weight: 700;
                     text-transform: uppercase;
-                    letter-spacing: 0.8px;
+                    letter-spacing: .8px;
                 }
 
-                .info-url {
-                    color: var(--text-main);
+                .sitemap-url {
+                    color: var(--text);
                     font-size: 12px;
                     font-weight: 600;
                     word-break: break-all;
                 }
 
                 .status {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 6px;
                     margin-left: auto;
                     padding: 5px 9px;
                     border-radius: 5px;
@@ -211,18 +168,9 @@ exclude-result-prefixes="sitemap image">
                     color: #047857;
                     font-size: 10px;
                     font-weight: 700;
-                    text-transform: uppercase;
-                    letter-spacing: 0.5px;
                 }
 
-                .status-dot {
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 50%;
-                    background: var(--success);
-                }
-
-                .table-wrapper {
+                .table-wrap {
                     width: 100%;
                     overflow-x: auto;
                 }
@@ -230,101 +178,61 @@ exclude-result-prefixes="sitemap image">
                 table {
                     width: 100%;
                     border-collapse: collapse;
-                    text-align: left;
                 }
 
                 th {
                     padding: 14px 20px;
                     background: #fafafa;
-                    color: var(--text-muted);
-                    border-bottom: 1px solid var(--border-color);
+                    color: var(--muted);
+                    border-bottom: 1px solid var(--line);
                     font-size: 10px;
-                    font-weight: 700;
                     text-transform: uppercase;
-                    letter-spacing: 0.8px;
-                    white-space: nowrap;
+                    letter-spacing: .7px;
+                    text-align: left;
                 }
 
                 td {
-                    padding: 16px 20px;
-                    background: #ffffff;
-                    border-bottom: 1px solid #f1f5f9;
+                    padding: 15px 20px;
+                    border-bottom: 1px solid #f0f2f5;
                     font-size: 13px;
                     vertical-align: middle;
                 }
 
-                .section-row td {
-                    padding: 11px 20px;
-                    background: #f8fafc !important;
+                .section td {
+                    padding: 10px 20px;
+                    background: #f8fafc;
                     color: #475569;
-                    border-top: 1px solid var(--border-color);
-                    border-bottom: 1px solid var(--border-color);
+                    border-top: 1px solid var(--line);
+                    border-bottom: 1px solid var(--line);
                     font-size: 10px;
                     font-weight: 800;
                     text-transform: uppercase;
-                    letter-spacing: 1.2px;
+                    letter-spacing: 1px;
                 }
 
-                tbody tr.data-row {
-                    cursor: pointer;
-                    transition:
-                        background-color 0.15s ease,
-                        box-shadow 0.15s ease;
-                }
-
-                tbody tr.data-row:hover td {
-                    background: var(--accent-gold-light);
-                }
-
-                tbody tr.data-row:hover {
-                    box-shadow:
-                        inset 4px 0 0 var(--accent-gold);
-                }
-
-                .url-link {
-                    display: block;
-                    color: #94a3b8;
+                .url {
+                    color: var(--text);
                     text-decoration: none;
-                    font-size: 12px;
-                    line-height: 1.6;
                     word-break: break-word;
                 }
 
-                .url-link strong {
-                    color: var(--text-main);
-                    font-size: 13px;
-                    font-weight: 650;
+                .url:hover {
+                    color: var(--gold);
                 }
 
-                .url-link:hover strong {
-                    color: var(--accent-gold);
-                }
-
-                .img-indicator {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 5px;
-                    margin-top: 7px;
-                    padding: 4px 8px;
+                .image-badge {
+                    display: inline-block;
+                    margin-top: 6px;
+                    padding: 4px 7px;
                     border-radius: 4px;
                     background: var(--dark);
-                    color: #ffffff;
+                    color: white;
                     font-size: 9px;
                     font-weight: 700;
-                    letter-spacing: 0.4px;
                 }
 
-                .lastmod {
-                    color: var(--text-muted);
-                    font-size: 12px;
-                    font-variant-numeric: tabular-nums;
-                    white-space: nowrap;
-                }
-
-                .media-count {
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
+                .count {
+                    display: inline-block;
                     min-width: 30px;
                     padding: 4px 7px;
                     border-radius: 5px;
@@ -334,81 +242,59 @@ exclude-result-prefixes="sitemap image">
                     font-weight: 700;
                 }
 
-                .footer-brand {
-                    padding: 28px 20px;
+                .date {
+                    color: var(--muted);
+                    white-space: nowrap;
+                    font-size: 12px;
+                }
+
+                .footer {
+                    padding: 25px 20px;
+                    border-top: 1px solid var(--line);
+                    color: var(--muted);
                     text-align: center;
-                    color: var(--text-muted);
                     font-size: 10px;
-                    line-height: 1.6;
-                    letter-spacing: 0.5px;
-                    border-top: 1px solid var(--border-color);
+                    letter-spacing: .4px;
                 }
 
-                .footer-brand strong {
-                    color: var(--accent-gold);
+                .footer strong {
+                    color: var(--gold);
                 }
 
-                @media (max-width: 768px) {
+                @media (max-width: 700px) {
 
                     body {
-                        padding: 15px 10px;
+                        padding: 12px 8px;
                     }
 
-                    .header-area {
+                    .header {
                         flex-direction: column;
-                        align-items: center;
                         text-align: center;
-                        padding: 25px 20px;
+                        padding: 25px 18px;
                     }
 
-                    .brand-group {
+                    .brand {
                         flex-direction: column;
                     }
 
                     .counter {
                         width: 100%;
-                        justify-content: center;
+                        text-align: center;
                     }
 
-                    .info-bar {
-                        padding: 15px 20px;
+                    .info {
+                        padding: 15px 18px;
                     }
 
                     .status {
                         margin-left: 0;
                     }
 
-                    th {
+                    th,
+                    td {
                         padding: 12px;
                     }
-
-                    td {
-                        padding: 14px 12px;
-                    }
-
-                    th:nth-child(3),
-                    td:nth-child(3) {
-                        display: none;
-                    }
-
-                    .url-link {
-                        font-size: 11px;
-                    }
-
                 }
-
-                @media (prefers-reduced-motion: reduce) {
-
-                    html {
-                        scroll-behavior: auto;
-                    }
-
-                    tbody tr.data-row {
-                        transition: none;
-                    }
-
-                }
-
             </style>
 
         </head>
@@ -417,44 +303,36 @@ exclude-result-prefixes="sitemap image">
 
             <main class="container">
 
-                <header class="header-area">
+                <header class="header">
 
-                    <div class="brand-group">
+                    <div class="brand">
 
-                        <div class="logo-wrapper">
+                        <img
+                            src="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg"
+                            alt="Logo Decogri"
+                            width="68"
+                            height="68"/>
 
-                            <img
-                                src="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg"
-                                alt="Logo Decogri"
-                                width="72"
-                                height="72"/>
-
-                        </div>
-
-                        <div class="brand-info">
+                        <div>
 
                             <h1>
                                 DECOGRI
                                 <span>SITEMAP XML</span>
                             </h1>
 
-                            <p class="desc">
-                                Mapa de URLs indexables de Decogri para
-                                buscadores y sistemas de rastreo.
+                            <p class="description">
+                                Mapa de URLs indexables de Decogri para buscadores y sistemas de rastreo.
                             </p>
 
                         </div>
 
                     </div>
 
-                    <div
-                        class="counter"
-                        aria-label="Cantidad de URLs indexables">
+                    <div class="counter">
 
-                        <span aria-hidden="true"/>
+                        <span class="counter-dot"></span>
 
-                        <xsl:value-of
-                            select="count(sitemap:urlset/sitemap:url)"/>
+                        <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/>
 
                         <xsl:text> URLs INDEXABLES</xsl:text>
 
@@ -462,230 +340,61 @@ exclude-result-prefixes="sitemap image">
 
                 </header>
 
+                <div class="info">
 
-                <div class="info-bar">
+                    <span class="label">Sitemap:</span>
 
-                    <span class="info-label">
-                        Sitemap:
-                    </span>
-
-                    <span class="info-url">
+                    <span class="sitemap-url">
                         https://decogri.com.ar/sitemap.xml
                     </span>
 
                     <span class="status">
-
-                        <span
-                            class="status-dot"
-                            aria-hidden="true"/>
-
                         XML ACTIVO
-
                     </span>
 
                 </div>
 
-
-                <div class="table-wrapper">
+                <div class="table-wrap">
 
                     <table>
-
-                        <caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-                            URLs incluidas en el sitemap XML de Decogri
-                        </caption>
 
                         <thead>
 
                             <tr>
-
-                                <th scope="col">
-                                    URL Canónica
-                                </th>
-
-                                <th
-                                    scope="col"
-                                    style="text-align:center;width:120px;">
-
-                                    Imágenes
-
-                                </th>
-
-                                <th
-                                    scope="col"
-                                    style="text-align:center;width:160px;">
-
-                                    Última modificación
-
-                                </th>
-
+                                <th>URL Canónica</th>
+                                <th style="text-align:center;width:120px;">Imágenes</th>
+                                <th style="text-align:center;width:150px;">Última modificación</th>
                             </tr>
 
                         </thead>
 
                         <tbody>
 
-                            <xsl:for-each
-                                select="sitemap:urlset/sitemap:url">
+                            <xsl:for-each select="sitemap:urlset/sitemap:url">
 
-                                <xsl:variable
-                                    name="fullUrl"
-                                    select="sitemap:loc"/>
+                                <xsl:variable name="fullUrl" select="sitemap:loc"/>
 
-                                <xsl:variable
-                                    name="previousUrl"
-                                    select="preceding-sibling::sitemap:url[1]/sitemap:loc"/>
-
-
-                                <!-- HOME / CORE -->
-
-                                <xsl:if test="position() = 1">
-
-                                    <tr class="section-row">
-
-                                        <td colspan="3">
-                                            HOME &amp; CORE
-                                        </td>
-
-                                    </tr>
-
-                                </xsl:if>
-
-
-                                <!-- SILLONES -->
-
-                                <xsl:if test="
-                                    contains(
-                                        $fullUrl,
-                                        '/PRODUCTOS/SILLONES/'
-                                    )
-                                    and
-                                    not(
-                                        contains(
-                                            $previousUrl,
-                                            '/PRODUCTOS/SILLONES/'
-                                        )
-                                    )
-                                ">
-
-                                    <tr class="section-row">
-
-                                        <td colspan="3">
-                                            LÍNEA SILLONES A MEDIDA
-                                        </td>
-
-                                    </tr>
-
-                                </xsl:if>
-
-
-                                <!-- MUEBLES -->
-
-                                <xsl:if test="
-                                    contains(
-                                        $fullUrl,
-                                        '/PRODUCTOS/MUEBLES/'
-                                    )
-                                    and
-                                    not(
-                                        contains(
-                                            $previousUrl,
-                                            '/PRODUCTOS/MUEBLES/'
-                                        )
-                                    )
-                                ">
-
-                                    <tr class="section-row">
-
-                                        <td colspan="3">
-                                            MOBILIARIO DE DISEÑO &amp; INTERIOR
-                                        </td>
-
-                                    </tr>
-
-                                </xsl:if>
-
-
-                                <!-- TEXTILES -->
-
-                                <xsl:if test="
-                                    contains(
-                                        $fullUrl,
-                                        '/PRODUCTOS/TEXTILES/'
-                                    )
-                                    and
-                                    not(
-                                        contains(
-                                            $previousUrl,
-                                            '/PRODUCTOS/TEXTILES/'
-                                        )
-                                    )
-                                ">
-
-                                    <tr class="section-row">
-
-                                        <td colspan="3">
-                                            TEXTILES &amp; CONFECCIÓN A MEDIDA
-                                        </td>
-
-                                    </tr>
-
-                                </xsl:if>
-
-
-                                <!-- DATA ROW -->
-
-                                <tr
-                                    class="data-row"
-                                    onclick="window.open('{$fullUrl}', '_blank')"
-                                    onkeydown="if(event.key === 'Enter' || event.key === ' '){event.preventDefault();window.open('{$fullUrl}', '_blank');}"
-                                    tabindex="0"
-                                    role="link"
-                                    aria-label="Abrir {$fullUrl}">
+                                <tr>
 
                                     <td>
 
-                                        <a
-                                            class="url-link"
-                                            href="{$fullUrl}"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onclick="event.stopPropagation();">
+                                        <a class="url"
+                                           href="{$fullUrl}"
+                                           target="_blank">
 
-                                            <xsl:text>https://decogri.com.ar/</xsl:text>
-
-                                            <strong>
-
-                                                <xsl:value-of
-                                                    select="
-                                                        substring-after(
-                                                            $fullUrl,
-                                                            'https://decogri.com.ar/'
-                                                        )
-                                                    "/>
-
-                                            </strong>
+                                            <xsl:value-of select="$fullUrl"/>
 
                                         </a>
 
-
-                                        <!-- IMAGE INDICATOR -->
-
                                         <xsl:if test="image:image">
 
-                                            <span class="img-indicator">
-
-                                                <xsl:text>
-                                                    ⚡ MULTIMEDIA MAP SYNCED
-                                                </xsl:text>
-
-                                            </span>
+                                            <div class="image-badge">
+                                                MULTIMEDIA
+                                            </div>
 
                                         </xsl:if>
 
                                     </td>
-
-
-                                    <!-- IMAGE COUNT -->
 
                                     <td style="text-align:center;">
 
@@ -693,12 +402,9 @@ exclude-result-prefixes="sitemap image">
 
                                             <xsl:when test="image:image">
 
-                                                <span class="media-count">
+                                                <span class="count">
 
-                                                    <xsl:value-of
-                                                        select="
-                                                            count(image:image)
-                                                        "/>
+                                                    <xsl:value-of select="count(image:image)"/>
 
                                                     <xsl:text> IMG</xsl:text>
 
@@ -708,9 +414,7 @@ exclude-result-prefixes="sitemap image">
 
                                             <xsl:otherwise>
 
-                                                <span class="media-count">
-                                                    —
-                                                </span>
+                                                <span class="count">—</span>
 
                                             </xsl:otherwise>
 
@@ -718,36 +422,9 @@ exclude-result-prefixes="sitemap image">
 
                                     </td>
 
+                                    <td style="text-align:center;" class="date">
 
-                                    <!-- LAST MOD -->
-
-                                    <td
-                                        class="lastmod"
-                                        style="text-align:center;">
-
-                                        <xsl:choose>
-
-                                            <xsl:when
-                                                test="contains(sitemap:lastmod,'T')">
-
-                                                <xsl:value-of
-                                                    select="
-                                                        substring-before(
-                                                            sitemap:lastmod,
-                                                            'T'
-                                                        )
-                                                    "/>
-
-                                            </xsl:when>
-
-                                            <xsl:otherwise>
-
-                                                <xsl:value-of
-                                                    select="sitemap:lastmod"/>
-
-                                            </xsl:otherwise>
-
-                                        </xsl:choose>
+                                        <xsl:value-of select="sitemap:lastmod"/>
 
                                     </td>
 
@@ -761,8 +438,7 @@ exclude-result-prefixes="sitemap image">
 
                 </div>
 
-
-                <footer class="footer-brand">
+                <footer class="footer">
 
                     DECOGRI FACTORY AUDIT //
                     <strong>SITEMAP XML INDEX</strong>
