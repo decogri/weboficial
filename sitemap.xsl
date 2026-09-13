@@ -6,11 +6,12 @@ xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
 xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 exclude-result-prefixes="sitemap image">
 
-```
-<xsl:output method="html"
-            version="1.0"
-            encoding="UTF-8"
-            indent="yes"/>
+
+<xsl:output
+    method="html"
+    version="1.0"
+    encoding="UTF-8"
+    indent="yes"/>
 
 <xsl:template match="/">
 
@@ -23,11 +24,15 @@ exclude-result-prefixes="sitemap image">
             <meta name="viewport"
                   content="width=device-width, initial-scale=1.0"/>
 
+            <meta name="robots"
+                  content="noindex,follow"/>
+
             <title>Decogri | Sitemap XML</title>
 
-            <link rel="icon"
-                  type="image/jpeg"
-                  href="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg"/>
+            <link
+                rel="icon"
+                type="image/jpeg"
+                href="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg"/>
 
             <style>
 
@@ -79,10 +84,6 @@ exclude-result-prefixes="sitemap image">
                         0 20px 45px rgba(15,23,42,0.05);
                     overflow: hidden;
                 }
-
-                /* ================================
-                   HEADER
-                   ================================ */
 
                 .header-area {
                     display: flex;
@@ -149,10 +150,6 @@ exclude-result-prefixes="sitemap image">
                     line-height: 1.6;
                 }
 
-                /* ================================
-                   COUNTER
-                   ================================ */
-
                 .counter {
                     display: flex;
                     align-items: center;
@@ -177,10 +174,6 @@ exclude-result-prefixes="sitemap image">
                     box-shadow:
                         0 0 10px rgba(16,185,129,0.8);
                 }
-
-                /* ================================
-                   INFO BAR
-                   ================================ */
 
                 .info-bar {
                     display: flex;
@@ -229,10 +222,6 @@ exclude-result-prefixes="sitemap image">
                     background: var(--success);
                 }
 
-                /* ================================
-                   TABLE
-                   ================================ */
-
                 .table-wrapper {
                     width: 100%;
                     overflow-x: auto;
@@ -264,10 +253,6 @@ exclude-result-prefixes="sitemap image">
                     vertical-align: middle;
                 }
 
-                /* ================================
-                   SECTION ROWS
-                   ================================ */
-
                 .section-row td {
                     padding: 11px 20px;
                     background: #f8fafc !important;
@@ -279,10 +264,6 @@ exclude-result-prefixes="sitemap image">
                     text-transform: uppercase;
                     letter-spacing: 1.2px;
                 }
-
-                /* ================================
-                   DATA ROWS
-                   ================================ */
 
                 tbody tr.data-row {
                     cursor: pointer;
@@ -300,10 +281,6 @@ exclude-result-prefixes="sitemap image">
                         inset 4px 0 0 var(--accent-gold);
                 }
 
-                /* ================================
-                   URL
-                   ================================ */
-
                 .url-link {
                     display: block;
                     color: #94a3b8;
@@ -319,14 +296,9 @@ exclude-result-prefixes="sitemap image">
                     font-weight: 650;
                 }
 
-                tbody tr.data-row:hover
-                .url-link strong {
+                .url-link:hover strong {
                     color: var(--accent-gold);
                 }
-
-                /* ================================
-                   IMAGE BADGE
-                   ================================ */
 
                 .img-indicator {
                     display: inline-flex;
@@ -342,20 +314,12 @@ exclude-result-prefixes="sitemap image">
                     letter-spacing: 0.4px;
                 }
 
-                /* ================================
-                   LASTMOD
-                   ================================ */
-
                 .lastmod {
                     color: var(--text-muted);
                     font-size: 12px;
                     font-variant-numeric: tabular-nums;
                     white-space: nowrap;
                 }
-
-                /* ================================
-                   IMAGE COUNT
-                   ================================ */
 
                 .media-count {
                     display: inline-flex;
@@ -370,10 +334,6 @@ exclude-result-prefixes="sitemap image">
                     font-weight: 700;
                 }
 
-                /* ================================
-                   FOOTER
-                   ================================ */
-
                 .footer-brand {
                     padding: 28px 20px;
                     text-align: center;
@@ -387,10 +347,6 @@ exclude-result-prefixes="sitemap image">
                 .footer-brand strong {
                     color: var(--accent-gold);
                 }
-
-                /* ================================
-                   RESPONSIVE
-                   ================================ */
 
                 @media (max-width: 768px) {
 
@@ -441,26 +397,38 @@ exclude-result-prefixes="sitemap image">
 
                 }
 
+                @media (prefers-reduced-motion: reduce) {
+
+                    html {
+                        scroll-behavior: auto;
+                    }
+
+                    tbody tr.data-row {
+                        transition: none;
+                    }
+
+                }
+
             </style>
 
         </head>
 
         <body>
 
-            <div class="container">
+            <main class="container">
 
-                <!-- =========================================
-                     HEADER
-                     ========================================= -->
-
-                <div class="header-area">
+                <header class="header-area">
 
                     <div class="brand-group">
 
                         <div class="logo-wrapper">
+
                             <img
                                 src="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg"
-                                alt="Logo Decogri"/>
+                                alt="Logo Decogri"
+                                width="72"
+                                height="72"/>
+
                         </div>
 
                         <div class="brand-info">
@@ -479,9 +447,11 @@ exclude-result-prefixes="sitemap image">
 
                     </div>
 
-                    <div class="counter">
+                    <div
+                        class="counter"
+                        aria-label="Cantidad de URLs indexables">
 
-                        <span/>
+                        <span aria-hidden="true"/>
 
                         <xsl:value-of
                             select="count(sitemap:urlset/sitemap:url)"/>
@@ -490,12 +460,8 @@ exclude-result-prefixes="sitemap image">
 
                     </div>
 
-                </div>
+                </header>
 
-
-                <!-- =========================================
-                     INFORMATION BAR
-                     ========================================= -->
 
                 <div class="info-bar">
 
@@ -508,35 +474,48 @@ exclude-result-prefixes="sitemap image">
                     </span>
 
                     <span class="status">
-                        <span class="status-dot"/>
+
+                        <span
+                            class="status-dot"
+                            aria-hidden="true"/>
+
                         XML ACTIVO
+
                     </span>
 
                 </div>
 
 
-                <!-- =========================================
-                     TABLE
-                     ========================================= -->
-
                 <div class="table-wrapper">
 
                     <table>
+
+                        <caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+                            URLs incluidas en el sitemap XML de Decogri
+                        </caption>
 
                         <thead>
 
                             <tr>
 
-                                <th>
+                                <th scope="col">
                                     URL Canónica
                                 </th>
 
-                                <th style="text-align:center;width:120px;">
+                                <th
+                                    scope="col"
+                                    style="text-align:center;width:120px;">
+
                                     Imágenes
+
                                 </th>
 
-                                <th style="text-align:center;width:160px;">
+                                <th
+                                    scope="col"
+                                    style="text-align:center;width:160px;">
+
                                     Última modificación
+
                                 </th>
 
                             </tr>
@@ -552,10 +531,12 @@ exclude-result-prefixes="sitemap image">
                                     name="fullUrl"
                                     select="sitemap:loc"/>
 
+                                <xsl:variable
+                                    name="previousUrl"
+                                    select="preceding-sibling::sitemap:url[1]/sitemap:loc"/>
 
-                                <!-- =====================================
-                                     HOME
-                                     ===================================== -->
+
+                                <!-- HOME / CORE -->
 
                                 <xsl:if test="position() = 1">
 
@@ -570,9 +551,7 @@ exclude-result-prefixes="sitemap image">
                                 </xsl:if>
 
 
-                                <!-- =====================================
-                                     SILLONES
-                                     ===================================== -->
+                                <!-- SILLONES -->
 
                                 <xsl:if test="
                                     contains(
@@ -582,7 +561,7 @@ exclude-result-prefixes="sitemap image">
                                     and
                                     not(
                                         contains(
-                                            preceding-sibling::sitemap:url[1]/sitemap:loc,
+                                            $previousUrl,
                                             '/PRODUCTOS/SILLONES/'
                                         )
                                     )
@@ -599,40 +578,18 @@ exclude-result-prefixes="sitemap image">
                                 </xsl:if>
 
 
-                                <!-- =====================================
-                                     MUEBLES
-                                     ===================================== -->
+                                <!-- MUEBLES -->
 
                                 <xsl:if test="
-                                    (
-                                        contains($fullUrl, '/PRODUCTOS/MESAS/')
-                                        or
-                                        contains($fullUrl, '/PRODUCTOS/RESPALDOS/')
-                                        or
-                                        contains($fullUrl, '/PRODUCTOS/SILLAS-BANQUETAS/')
-                                        or
-                                        contains($fullUrl, '/PRODUCTOS/PUFF/')
+                                    contains(
+                                        $fullUrl,
+                                        '/PRODUCTOS/MUEBLES/'
                                     )
                                     and
                                     not(
                                         contains(
-                                            preceding-sibling::sitemap:url[1]/sitemap:loc,
-                                            '/PRODUCTOS/MESAS/'
-                                        )
-                                        or
-                                        contains(
-                                            preceding-sibling::sitemap:url[1]/sitemap:loc,
-                                            '/PRODUCTOS/RESPALDOS/'
-                                        )
-                                        or
-                                        contains(
-                                            preceding-sibling::sitemap:url[1]/sitemap:loc,
-                                            '/PRODUCTOS/SILLAS-BANQUETAS/'
-                                        )
-                                        or
-                                        contains(
-                                            preceding-sibling::sitemap:url[1]/sitemap:loc,
-                                            '/PRODUCTOS/PUFF/'
+                                            $previousUrl,
+                                            '/PRODUCTOS/MUEBLES/'
                                         )
                                     )
                                 ">
@@ -648,9 +605,7 @@ exclude-result-prefixes="sitemap image">
                                 </xsl:if>
 
 
-                                <!-- =====================================
-                                     TEXTILES
-                                     ===================================== -->
+                                <!-- TEXTILES -->
 
                                 <xsl:if test="
                                     contains(
@@ -660,7 +615,7 @@ exclude-result-prefixes="sitemap image">
                                     and
                                     not(
                                         contains(
-                                            preceding-sibling::sitemap:url[1]/sitemap:loc,
+                                            $previousUrl,
                                             '/PRODUCTOS/TEXTILES/'
                                         )
                                     )
@@ -677,21 +632,29 @@ exclude-result-prefixes="sitemap image">
                                 </xsl:if>
 
 
-                                <!-- =====================================
-                                     DATA ROW
-                                     ===================================== -->
+                                <!-- DATA ROW -->
 
                                 <tr
                                     class="data-row"
-                                    onclick="window.open('{$fullUrl}', '_blank')">
+                                    onclick="window.open('{$fullUrl}', '_blank')"
+                                    onkeydown="if(event.key === 'Enter' || event.key === ' '){event.preventDefault();window.open('{$fullUrl}', '_blank');}"
+                                    tabindex="0"
+                                    role="link"
+                                    aria-label="Abrir {$fullUrl}">
 
                                     <td>
 
-                                        <span
+                                        <a
                                             class="url-link"
+                                            href="{$fullUrl}"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             onclick="event.stopPropagation();">
 
-                                            https://decogri.com.ar/<strong>
+                                            <xsl:text>https://decogri.com.ar/</xsl:text>
+
+                                            <strong>
+
                                                 <xsl:value-of
                                                     select="
                                                         substring-after(
@@ -699,9 +662,10 @@ exclude-result-prefixes="sitemap image">
                                                             'https://decogri.com.ar/'
                                                         )
                                                     "/>
+
                                             </strong>
 
-                                        </span>
+                                        </a>
 
 
                                         <!-- IMAGE INDICATOR -->
@@ -709,7 +673,11 @@ exclude-result-prefixes="sitemap image">
                                         <xsl:if test="image:image">
 
                                             <span class="img-indicator">
-                                                ⚡ MULTIMEDIA MAP SYNCED
+
+                                                <xsl:text>
+                                                    ⚡ MULTIMEDIA MAP SYNCED
+                                                </xsl:text>
+
                                             </span>
 
                                         </xsl:if>
@@ -732,9 +700,7 @@ exclude-result-prefixes="sitemap image">
                                                             count(image:image)
                                                         "/>
 
-                                                    <xsl:text>
-                                                        IMG
-                                                    </xsl:text>
+                                                    <xsl:text> IMG</xsl:text>
 
                                                 </span>
 
@@ -796,26 +762,22 @@ exclude-result-prefixes="sitemap image">
                 </div>
 
 
-                <!-- =========================================
-                     FOOTER
-                     ========================================= -->
-
-                <div class="footer-brand">
+                <footer class="footer-brand">
 
                     DECOGRI FACTORY AUDIT //
                     <strong>SITEMAP XML INDEX</strong>
                     //
                     URLs CANÓNICAS DE PRODUCCIÓN
 
-                </div>
+                </footer>
 
-            </div>
+            </main>
 
         </body>
 
     </html>
 
 </xsl:template>
-```
+
 
 </xsl:stylesheet>
