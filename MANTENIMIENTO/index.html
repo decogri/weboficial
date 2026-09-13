@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Decogri | Estamos actualizando nuestro sitio</title>
+
+<meta name="description" content="Decogri, fábrica de sillones a medida en Don Torcuato, Zona Norte de Buenos Aires. Estamos actualizando nuestro sitio. Consultanos por WhatsApp y cotizá tu proyecto.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical" href="https://decogri.com.ar/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Decogri">
+<meta property="og:title" content="Decogri | Sillones a Medida">
+<meta property="og:description" content="Estamos actualizando nuestro sitio. Consultanos por WhatsApp y cotizá tu sillón o proyecto a medida.">
+<meta property="og:url" content="https://decogri.com.ar/">
+<meta property="og:image" content="https://decogri.com.ar/IMG/LOGO/banner-decogri.jpg">
+<meta property="og:image:alt" content="Decogri — fábrica de sillones a medida">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Decogri | Sillones a Medida">
+<meta name="twitter:description" content="Estamos actualizando nuestro sitio. Consultanos por WhatsApp.">
+<meta name="twitter:image" content="https://decogri.com.ar/IMG/LOGO/banner-decogri.jpg">
+
+<meta name="theme-color" content="#111111">
+
+<link rel="icon" href="https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg">
+
+<style>
+
+:root{
+    --bg:#0b0b0b;
+    --bg2:#151515;
+    --gold:#c8a46a;
+    --gold-light:#e1c58f;
+    --text:#f4f1eb;
+    --muted:#aaa49b;
+    --line:rgba(255,255,255,.10);
+    --whatsapp:#25d366;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(200,164,106,.12), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(200,164,106,.08), transparent 35%),
+        linear-gradient(135deg,#080808 0%,#111 50%,#080808 100%);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.035;
+    background-image:
+        linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
+    background-size:60px 60px;
+}
+
+.page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    z-index:1;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    padding:28px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid var(--line);
+}
+
+.logo{
+    text-decoration:none;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+}
+
+.logo-main{
+    font-size:25px;
+    font-weight:700;
+    letter-spacing:5px;
+}
+
+.logo-sub{
+    margin-top:7px;
+    font-size:9px;
+    letter-spacing:3px;
+    color:var(--gold);
+    text-transform:uppercase;
+}
+
+.header-location{
+    color:#aaa;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+/* MAIN */
+
+main{
+    flex:1;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:70px 20px 80px;
+}
+
+.content{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+}
+
+/* DECORATIVE MARK */
+
+.mark{
+    width:82px;
+    height:82px;
+    margin:0 auto 35px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.mark:before,
+.mark:after{
+    content:"";
+    position:absolute;
+    border:1px solid var(--gold);
+    transform:rotate(45deg);
+}
+
+.mark:before{
+    width:58px;
+    height:58px;
+    opacity:.7;
+}
+
+.mark:after{
+    width:38px;
+    height:38px;
+    opacity:.35;
+}
+
+.mark span{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 25px rgba(200,164,106,.8);
+}
+
+/* TEXT */
+
+.eyebrow{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+h1{
+    font-family:Georgia, "Times New Roman", serif;
+    font-weight:400;
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.02;
+    letter-spacing:-2px;
+    margin-bottom:25px;
+}
+
+h1 span{
+    color:var(--gold-light);
+}
+
+.description{
+    max-width:680px;
+    margin:0 auto;
+    color:#c0bbb3;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.description strong{
+    color:#fff;
+    font-weight:600;
+}
+
+/* STATUS */
+
+.status{
+    margin:38px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    color:#aaa49b;
+    font-size:12px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.status-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 14px rgba(200,164,106,.7);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.4;transform:scale(.75)}
+}
+
+/* BUTTONS */
+
+.actions{
+    margin-top:42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:54px;
+    padding:0 28px;
+    border-radius:2px;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.4px;
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:#111;
+    box-shadow:0 10px 30px rgba(200,164,106,.15);
+}
+
+.btn-primary:hover{
+    background:var(--gold-light);
+    transform:translateY(-2px);
+    box-shadow:0 15px 35px rgba(200,164,106,.25);
+}
+
+.btn-whatsapp{
+    background:var(--whatsapp);
+    color:#fff;
+}
+
+.btn-whatsapp:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.08);
+    box-shadow:0 12px 30px rgba(37,211,102,.18);
+}
+
+.whatsapp-icon{
+    margin-right:10px;
+    font-size:18px;
+}
+
+/* FEATURE LINE */
+
+.features{
+    max-width:850px;
+    margin:65px auto 0;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.feature{
+    padding:0 25px;
+    border-right:1px solid var(--line);
+}
+
+.feature:last-child{
+    border-right:none;
+}
+
+.feature-title{
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:9px;
+}
+
+.feature-text{
+    color:#88837c;
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid var(--line);
+    padding:25px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    color:#77736d;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+footer a{
+    color:var(--gold);
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:var(--gold-light);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        padding:22px 22px;
+    }
+
+    .logo-main{
+        font-size:21px;
+        letter-spacing:4px;
+    }
+
+    .logo-sub{
+        font-size:8px;
+    }
+
+    .header-location{
+        display:none;
+    }
+
+    main{
+        padding:60px 22px 55px;
+    }
+
+    .mark{
+        margin-bottom:30px;
+    }
+
+    h1{
+        font-size:48px;
+        letter-spacing:-1.5px;
+    }
+
+    .description{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .btn{
+        width:100%;
+        max-width:360px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+        gap:24px;
+        margin-top:50px;
+    }
+
+    .feature{
+        border-right:none;
+        padding:0;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+        padding:22px;
+        line-height:1.7;
+    }
+
+}
+
+</style>
+
+<!-- DATOS ESTRUCTURADOS -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"FurnitureStore",
+      "@id":"https://decogri.com.ar/#business",
+      "name":"Decogri",
+      "alternateName":"Decogri Sillones de Autor",
+      "url":"https://decogri.com.ar/",
+      "logo":"https://decogri.com.ar/IMG/LOGO/logo-decogri.jpg",
+      "image":"https://decogri.com.ar/IMG/LOGO/banner-decogri.jpg",
+      "description":"Fábrica de sillones a medida y muebles de diseño en Don Torcuato, Zona Norte de Buenos Aires.",
+      "telephone":"+5491159565865",
+      "priceRange":"$$$",
+      "address":{
+        "@type":"PostalAddress",
+        "addressLocality":"Don Torcuato",
+        "addressRegion":"Buenos Aires",
+        "addressCountry":"AR"
+      },
+      "geo":{
+        "@type":"GeoCoordinates",
+        "latitude":-34.4844,
+        "longitude":-58.6144
+      },
+      "areaServed":[
+        "Don Torcuato",
+        "Tigre",
+        "Nordelta",
+        "San Fernando",
+        "San Isidro",
+        "Vicente López",
+        "Malvinas Argentinas",
+        "Pilar",
+        "Zona Norte",
+        "Buenos Aires",
+        "CABA",
+        "Argentina"
+      ],
+      "sameAs":[
+        "https://www.instagram.com/decogriok/",
+        "https://www.facebook.com/Decogriok/",
+        "https://www.tiktok.com/@decogriok",
+        "https://www.youtube.com/@luzgrisellemossilva7258",
+        "https://ar.pinterest.com/decogri/"
+      ]
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://decogri.com.ar/#webpage",
+      "url":"https://decogri.com.ar/",
+      "name":"Decogri | Sillones a Medida",
+      "isPartOf":{
+        "@id":"https://decogri.com.ar/#business"
+      },
+      "about":{
+        "@id":"https://decogri.com.ar/#business"
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+
+
+<a class="logo" href="/">
+    <span class="logo-main">DECOGRI</span>
+    <span class="logo-sub">Sillones de Autor</span>
+</a>
+
+<div class="header-location">
+    Don Torcuato · Zona Norte · Buenos Aires
+</div>
+
+
+</header>
+
+<main>
+
+<section class="content">
+
+
+<div class="mark" aria-hidden="true">
+    <span></span>
+</div>
+
+<div class="eyebrow">
+    Estamos renovando nuestra web
+</div>
+
+<h1>
+    Diseñamos.<br>
+    <span>Fabricamos.</span><br>
+    Volvemos pronto.
+</h1>
+
+<p class="description">
+    Estamos realizando una actualización de nuestro sitio para
+    ofrecerte una experiencia mejor y mostrarte todo lo nuevo de
+    <strong>Decogri</strong>.
+    <br><br>
+    <strong>Pero seguimos atendiendo normalmente.</strong>
+    Si estás buscando un sillón, sofá, esquinero o mueble a medida,
+    podés consultarnos ahora mismo.
+</p>
+
+<div class="status">
+    <span class="status-dot"></span>
+    Atención disponible
+</div>
+
+<div class="actions">
+
+    <a class="btn btn-primary"
+       href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20estoy%20viendo%20su%20sitio%20y%20quiero%20consultar%20por%20un%20producto%20a%20medida."
+       target="_blank"
+       rel="noopener">
+        CONSULTAR POR WHATSAPP
+    </a>
+
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5491159565865?text=Hola%20Decogri%2C%20quiero%20cotizar%20un%20sill%C3%B3n%20o%20mueble%20a%20medida."
+       target="_blank"
+       rel="noopener">
+        <span class="whatsapp-icon">◉</span>
+        COTIZAR MI PROYECTO
+    </a>
+
+</div>
+
+<div class="features">
+
+    <div class="feature">
+        <div class="feature-title">
+            A medida
+        </div>
+        <div class="feature-text">
+            Diseñamos cada pieza según tu espacio y proyecto.
+        </div>
+    </div>
+
+    <div class="feature">
+        <div class="feature-title">
+            Fabricación propia
+        </div>
+        <div class="feature-text">
+            Producción artesanal en Don Torcuato, Zona Norte.
+        </div>
+    </div>
+
+    <div class="feature">
+        <div class="feature-title">
+            Atención directa
+        </div>
+        <div class="feature-text">
+            Consultanos directamente para recibir tu presupuesto.
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+</main>
+
+<footer>
+
+
+<span>
+    © 2026 Decogri · Don Torcuato · Buenos Aires
+</span>
+
+<a href="https://www.instagram.com/decogriok/"
+   target="_blank"
+   rel="noopener">
+    @decogriok
+</a>
+
+
+</footer>
+
+</div>
+
+</body>
+</html>
