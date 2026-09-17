@@ -1279,14 +1279,15 @@ document
       partes.join("\n")
     );
 
-    const whatsappURL =
-      "https://wa.me/5491159565865?text=" + texto;
+   window.dataLayer = window.dataLayer || [];
 
-    window.open(
-      whatsappURL,
-      "_blank",
-      "noopener,noreferrer"
-    );
+window.dataLayer.push({
+  event: 'contacto_whatsapp',
+  contacto_tipo: 'formulario_whatsapp'
+});
+
+const whatsappURL = "https://wa.me/5491159565865?text=" + texto;
+window.open(whatsappURL, "_blank", "noopener,noreferrer");
 
   });
 
