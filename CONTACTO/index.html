@@ -1180,117 +1180,144 @@ footer a:hover{
 </footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-function toggleMenu(){
+  function toggleMenu(){
 
-  const isOpen = navLinks.classList.toggle("open");
-
-  menuToggle.setAttribute(
-    "aria-expanded",
-    String(isOpen)
-  );
-
-  menuToggle.setAttribute(
-    "aria-label",
-    isOpen ? "Cerrar menú" : "Abrir menú"
-  );
-
-}
-
-menuToggle.addEventListener("click", toggleMenu);
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-  link.addEventListener("click", () => {
-
-    navLinks.classList.remove("open");
+    const isOpen = navLinks.classList.toggle("open");
 
     menuToggle.setAttribute(
       "aria-expanded",
-      "false"
+      String(isOpen)
     );
 
     menuToggle.setAttribute(
       "aria-label",
-      "Abrir menú"
-    );
-
-  });
-
-});
-
-document.addEventListener("keydown", event => {
-
-  if(event.key === "Escape"){
-
-    navLinks.classList.remove("open");
-
-    menuToggle.setAttribute(
-      "aria-expanded",
-      "false"
-    );
-
-    menuToggle.setAttribute(
-      "aria-label",
-      "Abrir menú"
+      isOpen ? "Cerrar menú" : "Abrir menú"
     );
 
   }
 
+  if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Abrir menú"
+        );
+
+      });
+
+    });
+
+    document.addEventListener("keydown", event => {
+
+      if(event.key === "Escape"){
+
+        navLinks.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Abrir menú"
+        );
+
+      }
+
+    });
+
+  }
+
+
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event){
+
+      event.preventDefault();
+
+      const nombre =
+        document.getElementById("nombre").value.trim();
+
+      const producto =
+        document.getElementById("producto").value;
+
+      const medidas =
+        document.getElementById("medidas").value.trim();
+
+      const mensaje =
+        document.getElementById("mensaje").value.trim();
+
+      const partes = [
+        "Hola Decogri, quiero hacer una consulta.",
+        "",
+        "Nombre: " + nombre,
+        "Producto: " + producto
+      ];
+
+      if(medidas){
+        partes.push("Medidas: " + medidas);
+      }
+
+      if(mensaje){
+        partes.push("Consulta: " + mensaje);
+      }
+
+      const texto = encodeURIComponent(
+        partes.join("\n")
+      );
+
+
+      /* =========================================
+         CONVERSIÓN GOOGLE ADS
+         ========================================= */
+
+      window.dataLayer = window.dataLayer || [];
+
+      window.dataLayer.push({
+        event: "contacto_whatsapp",
+        contacto_tipo: "formulario_whatsapp"
+      });
+
+
+      /* =========================================
+         ABRIR WHATSAPP
+         ========================================= */
+
+      const whatsappURL =
+        "https://wa.me/5491159565865?text=" + texto;
+
+      window.open(
+        whatsappURL,
+        "_blank",
+        "noopener,noreferrer"
+      );
+
+    });
+
+  }
+
 });
-
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function(event){
-
-    event.preventDefault();
-
-    const nombre =
-      document.getElementById("nombre").value.trim();
-
-    const producto =
-      document.getElementById("producto").value;
-
-    const medidas =
-      document.getElementById("medidas").value.trim();
-
-    const mensaje =
-      document.getElementById("mensaje").value.trim();
-
-    const partes = [
-      "Hola Decogri, quiero hacer una consulta.",
-      "",
-      "Nombre: " + nombre,
-      "Producto: " + producto
-    ];
-
-    if(medidas){
-      partes.push("Medidas: " + medidas);
-    }
-
-    if(mensaje){
-      partes.push("Consulta: " + mensaje);
-    }
-
-    const texto = encodeURIComponent(
-      partes.join("\n")
-    );
-
-   window.dataLayer = window.dataLayer || [];
-
-window.dataLayer.push({
-  event: 'contacto_whatsapp',
-  contacto_tipo: 'formulario_whatsapp'
-});
-
-const whatsappURL = "https://wa.me/5491159565865?text=" + texto;
-window.open(whatsappURL, "_blank", "noopener,noreferrer");
-
-  });
-
 </script>
 
 </body>
